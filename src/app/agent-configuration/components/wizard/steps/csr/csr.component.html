@@ -1,0 +1,14 @@
+<eui-page-header [isHeaderMultilines]="true" [label]="'agentConfiguration.wizard.CSR' | translate" [subLabel]="'agentConfiguration.wizard.csrMessage' | translate"></eui-page-header>
+<eui-page-content>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12">
+        <app-credentials-table (exportCsr)="onCsrExport($event)" [view]="'wizard'" [defaultSorting]="agentsConfigurationService.defaultTableSorting" [csrData]="(agentsConfigurationService.getKeyPairs() | async)!" />
+      </div>
+    </div>
+  </div>
+</eui-page-content>
+
+@if (isDialogExportCsrOpen()) {
+  <app-csr-export (dialogClose)="onDialogClose($event)" [keypairId]="selectedKeypairId()!"></app-csr-export>
+}

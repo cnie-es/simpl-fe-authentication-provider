@@ -1,0 +1,65 @@
+<div class="row eui-u-flex-align-items-center eui-u-flex-justify-content-center eui-u-pt-4xl eui-u-px-3xl">
+  <div class="col-12 col-lg-4">
+
+
+      <ng-container *transloco="let t; prefix: 'echo'">
+
+        <h1 class="eui-u-c-primary">{{ t('title') }}</h1>
+
+        <h5>{{ t('subTitle') }}</h5>
+
+        @if (echoResponse()) {
+          <p class="flex-shrink-0">{{t('username')}}: {{ echoResponse().username || 'no data' }}</p>
+          <p class="flex-shrink-0 eui-u-mb-none">{{t('email')}}: {{ echoResponse().email  || 'no data' }}</p>
+
+          <div class="eui-u-flex eui-u-flex-gap-s">
+            <p class="flex-shrink-0">{{t('endUserAssignedIdentityAttribute')+ ":"}}</p>
+            @for (idAttr of echoResponse().userIdentityAttributes; track idAttr;) {
+              <p> {{ idAttr }}{{($index === echoResponse()!.userIdentityAttributes!.length -1) ? '' : ',&nbsp;' }} </p>
+            } @empty {
+            <p> {{t('noData')}} </p>
+          }
+          </div>
+          @if (echoResponse().connectionStatus || echoResponse().mtlsStatus) {
+            <hr>
+
+            <div class="eui-u-flex flex-row eui-u-flex-gap-s eui-u-flex-align-items-center">
+              <p class="flex-shrink-0">{{t('connectionStatus')+ ":"}}</p>
+              <eui-chip [euiTooltip]="echoResponse().connectionStatus === 'CONNECTED' ? t('connectionStatusOk') : t('connectionStatusKo')" [euiSuccess]="echoResponse().connectionStatus === 'CONNECTED'" [euiDanger]="echoResponse().connectionStatus === 'NOT_CONNECTED'">{{ echoResponse().connectionStatus || 'no data' | removeUnderscore}}</eui-chip>
+            </div>
+
+            <div class="eui-u-flex flex-row eui-u-flex-gap-s eui-u-flex-align-items-center">
+              <p class="flex-shrink-0">{{t('mtlsStatus')+ ":"}}</p>
+              <eui-chip [euiTooltip]="echoResponse().mtlsStatus === 'SECURED' ? t('mtlsStatusOk') : t('mtlsStatusKo')" [euiSuccess]="echoResponse().mtlsStatus === 'SECURED'" [euiDanger]="echoResponse().mtlsStatus === 'NOT_SECURED'">{{ echoResponse().mtlsStatus || 'no data' | removeUnderscore}}</eui-chip>
+            </div>
+          }
+          @if (echoResponse().id || echoResponse().organization) {
+            <hr>
+            @if (echoResponse().id) {
+              <div class="eui-u-flex flex-row eui-u-flex-gap-s eui-u-flex-align-items-center" >
+                <p class="flex-shrink-0">{{t('commonName')+ ":"}}</p>
+                <p>{{ echoResponse().id || 'no data' }}</p>
+              </div>
+            }
+            @if (echoResponse().organization) {
+              <div class="eui-u-flex flex-row eui-u-flex-gap-s eui-u-flex-align-items-center">
+                <p class="flex-shrink-0">{{t('organization')+ ":"}}</p>
+                <p>{{ echoResponse().organization|| 'no data' }}</p>
+              </div>
+            }
+
+            <div class="">
+              <p>{{t('assignedIdentityAttributes')+ ":"}}
+              @for (idAttr of echoResponse().identityAttributes; track idAttr.id;) {
+                <span> {{ idAttr.name }}{{($index === echoResponse()!.identityAttributes!.length -1) ? '' : ',&nbsp;' }} </span>
+              } @empty {
+              <p> {{t('noData')}} </p>
+            }
+              </p>
+            </div>
+          }
+        }
+      </ng-container>
+
+  </div>
+</div>

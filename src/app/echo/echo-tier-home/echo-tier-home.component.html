@@ -1,0 +1,22 @@
+<ng-container *transloco="let t">
+  <eui-page>
+    <eui-page-header [subLabel]="t('utilitiesDescription')" [label]="t('participantUtilities')"></eui-page-header>
+    <eui-page-content>
+        <div class="row eui-u-flex-justify-content-center">
+          <div class="col-12 col-md-6 col-xl-4 eui-u-mt-4xl">
+            <button [routerLink]="['/echo']" data-testid="echo_page_button_navigateonecho" class="eui-u-width-100" euiButton euiPrimary>
+              <span euiLabel>{{ t('echo.echo') }}</span>
+            </button>
+          </div>
+        </div>
+        <div class="row eui-u-flex-justify-content-center">
+          <div class="col-12 col-md-6 col-xl-4 eui-u-mt-4xl">
+            <button [routerLink]="['/ping']" data-testid="echo_page_button_navigateonping" class="eui-u-width-100" euiButton euiPrimary>
+              <span euiLabel>{{ t('ping.ping') }}</span>
+            </button>
+          </div>
+        </div>
+    </eui-page-content>
+  </eui-page>
+</ng-container>
+

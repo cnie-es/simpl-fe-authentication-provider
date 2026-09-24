@@ -1,0 +1,296 @@
+{
+  "credentialsNotInstalled": "Actualment el teu agent no té cap credencial activa",
+  "filters": {
+    "from": "Des de",
+    "to": "Fins a",
+    "status": {
+      "VALID": "VÀLID",
+      "EXPIRED": "EXPIRAT",
+      "REVOKED": "REVOCAT",
+      "SUSPENDED": "SUSPÈS"
+    },
+    "selectedCriteria": "Criteris seleccionats",
+    "clearAll": "Netejar tot"
+  },
+  "common": {
+    "yes": "Sí",
+    "actionCompleted": "Acció Completada",
+    "actionFailed": "Acció Fallida",
+    "no": "No",
+    "signout": "Tancar sessió"
+  },
+  "title": "Benvingut a ${DATASPACE_NAME}",
+  "participantUtilities": "Utilitats del participant",
+  "utilitiesDescription": "Aquí pots trobar algunes utilitats per verificar l'estat de la teva connexió",
+  "echo": {
+    "title": "/echo",
+    "subTitle": "Aquesta és la pàgina /echo del teu agent. Aquí pots recuperar tota la informació continguda en el teu token d'identitat",
+    "key1": "Atribut d'Identitat",
+    "username": "Nom d'usuari",
+    "email": "Adreça de correu electrònic",
+    "userRole": "Rol d'usuari",
+    "identityAttributes": "Atributs d'identitat",
+    "assignedIdentityAttributes": "Atributs d'identitat assignats",
+    "key4": "Tipus de participant",
+    "close": "Tancar",
+    "noData": "Sense dades",
+    "connectionStatus": "Estat de connexió",
+    "mtlsStatus": "Estat mTLS",
+    "commonName": "Nom comú",
+    "organization": "Organització",
+    "upload-credential-page": "Carregar credencial",
+    "echo-tier-1": "Echo Nivell 1",
+    "echo": "Echo",
+    "participantType": "Tipus de participant",
+    "upload-credential-title": "Credencials no instal·lades",
+    "upload-credential-title-2": "Instal·lant credencials",
+    "upload-credential-message-1": "Actualment no pots utilitzar aquest o cap altre agent perquè no podem verificar la presència de credencials vàlides al teu compte.",
+    "upload-credential-message-2": "Si us plau instal·la un conjunt de credencials vàlides i torna-ho a provar.",
+    "upload-credential-message-success": "Credencial carregada correctament",
+    "upload-credential-message-wait": "Si us plau espera mentre el sistema desempaqueta i valida les teves credencials, això hauria de prendre uns segons",
+    "upload-credential-submit": "Carrega la teva credencial",
+    "invalidCertificate": "Certificat invàlid",
+    "notConnectedAlert": "Aquesta connexió no és segura perquè el servei de l'Autoritat de Governança de l'Espai de Dades no està disponible temporalment en aquest moment.",
+    "endUserAssignedIdentityAttribute": "Atributs d'identitat assignats a l'usuari final",
+    "connectionStatusOk": "L'agent ha pogut connectar-se amb l'autoritat de governança",
+    "connectionStatusKo": "L'agent no pot connectar-se amb l'autoritat de governança",
+    "mtlsStatusOk": "Hi ha una credencial activa i no revocada instal·lada en aquest agent",
+    "mtlsStatusKo": "No hi ha una credencial activa i no revocada instal·lada en aquest agent"
+  },
+  "ping": {
+    "title": "/ping",
+    "ping": "Ping",
+    "subTitle": "Aquesta és la pàgina /ping del teu agent, tens la possibilitat de completar un camp de text especificant l'FQDN de destinació del gateway tier2 de l'agent que vols contactar, després envia la sol·licitud de prova de connexió",
+    "FQDNLabel": "FQDN del gateway tier2 de destinació",
+    "FQDNPlaceholder": "Escriu l'adreça aquí",
+    "echoButton": "ping",
+    "connectionSuccess": "Connexió establerta correctament.",
+    "connectionNotSuccess": "No s'ha pogut establir la connexió."
+  },
+  "landing-pages": {
+    "unauthorized": {
+      "title": "Accés Restringit per Rol",
+      "message": "Accés denegat. El teu rol no té permís per veure aquest contingut."
+    },
+    "error-page": {
+      "title": "Error",
+      "message": {
+        "400": "El servidor no ha pogut entendre la teva sol·licitud a causa d'una sintaxi mal formada o paràmetres invàlids. Si us plau verifica les dades que has enviat.",
+        "401": "No estàs autoritzat per accedir a aquest recurs. Si us plau assegura't d'haver iniciat sessió amb les credencials correctes.",
+        "403": "No tens permís per accedir a aquest recurs. Verifica els teus privilegis d'accés.",
+        "404": "El recurs que busques no s'ha pogut trobar al servidor. Si us plau verifica l'URL o contacta amb suport.",
+        "500": "El servidor ha trobat un error intern i no ha pogut completar la teva sol·licitud. Si us plau torna-ho a provar més tard.",
+        "501": "El servidor no suporta la funcionalitat requerida per complir amb la sol·licitud.",
+        "502": "El servidor, actuant com a gateway, ha rebut una resposta invàlida del servidor upstream.",
+        "503": "El servidor no està disponible actualment a causa de sobrecàrrega o manteniment. Si us plau torna-ho a provar més tard.",
+        "504": "El servidor, actuant com a gateway, no ha rebut una resposta oportuna del servidor upstream.",
+        "505": "El servidor no suporta la versió del protocol HTTP utilitzada en la sol·licitud.",
+        "508": "El servidor ha detectat un bucle infinit en processar la sol·licitud.",
+        "511": "El client ha d'autenticar-se per obtenir accés a la xarxa."
+      }
+    }
+  },
+  "agentConfiguration": {
+    "title": "Configuració de l'Agent",
+    "filters": "Filtres",
+    "noKeyPairs": "No hi ha parells de claus disponibles per a aquest agent en aquest moment",
+    "keypairDetail": "Veure detalls del parell de claus",
+    "tabs": {
+      "generateKeypair": "Generar parell de claus",
+      "importKeypair": "Importar parell de claus",
+      "generateCsr": "Generar CSR",
+      "importCredentials": "Importar credencials"
+    },
+    "credentialsDetail": {
+      "getCredentialsDetailError": "Hi ha hagut un error en recuperar els detalls de les credencials. Si us plau torna-ho a provar més tard.",
+      "title": "Detalls del parell de claus",
+      "newCredential": "Sol·licitar nova credencial",
+      "downloadCSR": "Descarregar CSR",
+      "noCsr": "No hi ha cap CSR disponible per a aquesta credencial en aquest moment",
+      "credentialInstallError": "Hi ha hagut un error en instal·lar la credencial. Si us plau torna-ho a provar més tard.",
+      "credentialInstallSuccess": "Credencial instal·lada correctament",
+      "installCredentialDialogTitle": "Instal·lar credencial",
+      "subTitle": "Estàs a punt d'instal·lar la següent credencial:",
+      "installCredentialDialogMessage": "Tingues en compte que instal·lar una credencial invalidarà totes les credencials prèviament carregades.",
+      "confirmationQuestion": "Vols continuar?",
+      "issuanceDateLabel": "Data d'emissió: ",
+      "credentialIdLabel": "ID de credencial: ",
+      "newCredentialsRequested": "Has sol·licitat correctament una nova credencial",
+      "credentialId": "ID de credencial",
+      "table": {
+        "publicKey": "Clau pública",
+        "name": "Nom",
+        "creationDate": "Data de creació"
+      },
+      "filters": {
+        "issuanceDateRange": "Data d'emissió",
+        "expirationDateRange": "Data d'expiració",
+        "title": "Filtres",
+        "status": "Estat",
+        "valid": "Vàlid",
+        "expired": "Expirat",
+        "revoked": "Revocat",
+        "suspended": "Suspès",
+        "placeholder": {
+          "status": "Seleccionar estat"
+        }
+      },
+      "credentials": {
+        "actions": "Accions",
+        "active": "Actiu",
+        "status": "Estat",
+        "issuanceDate": "Data d'emissió",
+        "expirationDate": "Data d'expiració",
+        "installCredential": "Instal·lar credencial",
+        "installNotPermitted": "Aquesta credencial no pot ser instal·lada",
+        "noCredentials": "No hi ha credencials disponibles per a aquest parell de claus"
+      }
+    },
+    "wizard": {
+      "keypair": "Parell de claus",
+      "message": "Aquest procés de tres passos et guiarà a través de la configuració de les teves credencials. Un cop completat, hauràs configurat i activat correctament una credencial, permetent l'accés i la comunicació dins de l'espai de dades.",
+      "keypairMessage": "En aquest pas, es crea un nou parell de claus a l'agent. Pots generar-ne un de nou o importar un parell de claus existent.",
+      "csrMessage": "Es generarà una Sol·licitud de Firma de Certificat (CSR) i s'associarà amb el parell de claus seleccionat. Un cop creat, pots descarregar-lo i enviar-lo a l'Autoritat de Governança per completar el procés d'incorporació.",
+      "credentialsMessage": "Després d'obtenir la credencial de l'Autoritat de Governança, pots importar-la aquí per finalitzar la configuració de l'agent.",
+      "CSR": "CSR",
+      "credentials": "Credencials",
+      "uploadFile": "Carregar fitxer"
+    },
+    "importCredentials": "Importar credencials",
+    "active": "Actiu",
+    "name": "Nom",
+    "creationTimestamp": "Data de creació",
+    "actions": "Accions",
+    "csr": "Generar nou CSR",
+    "generateKeyPairDescription": "Generar un parell de claus públiques internament. Aquest procediment crearà el parell i l'emmagatzemarà automàticament dins de l'agent.",
+    "generateKeyPairButton": "Generar Parell de Claus Pública/Privada",
+    "keypairGeneration": {
+      "title": "Generar parell de claus",
+      "description": "Es generarà un nou parell de claus pública/privada i s'emmagatzemarà a l'agent.",
+      "name": "Nom del parell de claus",
+      "message-1": "Tingues en compte que generar un parell de claus invalidarà totes les credencials prèviament carregades.",
+      "message-2": "Vols continuar?",
+      "cancel": "Cancel·lar",
+      "confirm": "Generar parell de claus",
+      "loading": "Si us plau espera mentre el sistema genera el parell de claus",
+      "success": "Parell de claus generat correctament i emmagatzemat a la configuració de l'agent.",
+      "error": "La generació del parell de claus ha fallat. Si us plau torna-ho a provar més tard.",
+      "privateKey": "Clau privada",
+      "publicKey": "Clau pública",
+      "ok": "D'acord"
+    },
+    "importKeypair": {
+      "success": "Importació de parell de claus completada correctament",
+      "error": "La importació del parell de claus ha fallat. Si us plau torna-ho a provar més tard.",
+      "importKeyPairDescription": "Enganxa la clau privada i pública a les àrees de text o carrega els fitxers",
+      "pastePrivateKeyPlaceholder": "Enganxa la clau privada aquí",
+      "uploadPrivateKey": "Carregar clau privada",
+      "delete": "Eliminar",
+      "pastePublicKeyPlaceholder": "Enganxa la clau pública aquí",
+      "requiredField": "Aquest camp és obligatori",
+      "uploadPublicKey": "Carregar clau pública",
+      "algoInfo": "Si el teu agent està configurat amb claus ECDSA de 256 bits, has de generar el parell de claus pública/privada seguint aquestes comandes d'openSSL:",
+      "otherCases": "En tots els altres casos de configuració, si us plau consulta la documentació d'openSSL per crear un parell de claus adequat",
+      "importKeyPair": "Importar parell de claus",
+      "privateKeyPlaceholder": "Enganxa la clau privada aquí",
+      "moreDetails": "Més detalls",
+      "lessDetails": "Menys detalls",
+      "clipboard": "Copiar al porta-retalls",
+      "copied": "Copiat!",
+      "publicKeyPlaceholder": "Enganxa la clau pública aquí"
+    },
+    "csrGeneration": {
+      "certificateSigningRequestDescription": "Activar una sol·licitud de firma de certificat",
+      "launchCertificateSigningRequest": "Llançar Sol·licitud de Firma de Certificat",
+      "titleCredential": "Sol·licitar nova credencial",
+      "title": "Detalls del CSR",
+      "message": "Si us plau completa els paràmetres necessaris del Nom Distingit per procedir amb el CSR.",
+      "messageCredential": "Si us plau completa els paràmetres necessaris del Nom Distingit per procedir amb la sol·licitud de nova credencial.",
+      "cancel": "Cancel·lar",
+      "confirm": "Enviar",
+      "loading": "Si us plau espera mentre el sistema genera el CSR",
+      "submit": "Enviar",
+      "download": "Descarregar ara",
+      "success": "CSR generat i descarregat correctament.",
+      "error": "Hi ha hagut un error en activar el teu CSR. Si us plau torna-ho a provar més tard.",
+      "ok": "D'acord"
+    },
+    "csrDetails": {
+      "commonName": "Nom comú (CN)",
+      "commonNamePlaceholder": "Nom comú",
+      "organisation": "Organització (O)",
+      "organisationPlaceholder": "Organització",
+      "organisationUnit": "Unitat d'Organització (OU)",
+      "organisationUnitPlaceholder": "Unitat d'Organització",
+      "country": "País (C)",
+      "countryPlaceholder": "País"
+    },
+    "credentialsImport": {
+      "credentialsImportDescription": "Importar credencials a l'agent",
+      "launchCredentialsUpload": "Carrega les teves credencials",
+      "title": "Carregar credencials",
+      "message": "Tingues en compte que carregar un conjunt de credencials invalidarà totes les prèviament carregades.",
+      "message2": "Vols continuar?",
+      "cancel": "Cancel·lar",
+      "confirm": "Carregar credencials",
+      "success": "Credencials carregades correctament i emmagatzemades a l'agent.",
+      "error": "La càrrega de credencials ha fallat. Si us plau torna-ho a provar més tard.",
+      "ok": "D'acord",
+      "loading": "Si us plau espera mentre es carreguen les credencials"
+    },
+    "csrFilters": {
+      "name": "Nom",
+      "active": "Actiu",
+      "yes": "sí",
+      "no": "no",
+      "dateRange": "Data de creació",
+      "reset": "Restablir",
+      "apply": "Aplicar",
+      "placeholder": {
+        "name": "Introduir nom",
+        "active": "Seleccionar actiu",
+        "dateRange": "Seleccionar rang de dates de creació"
+      }
+    },
+    "updateAndInstall": "Instal·lar credencial",
+    "newKeypair": "Nou parell de claus",
+    "generateNew": "Generar nou",
+    "import": "Importar nou",
+    "automaticRenewalConfiguration": {
+      "title": "Habilitar renovació automàtica de credencials",
+      "errorMessage": "Alguna cosa ha anat malament. Si us plau torna-ho a provar."
+    },
+    "reasonLabel": "Motiu de les noves credencials"
+  },
+  "agentConfigurationFilters": {
+    "filters": {
+      "name": "Nom",
+      "active": "Actiu",
+      "updateTimestampFrom": "Data de creació des de",
+      "updateTimestampTo": "Data de creació fins a"
+    }
+  },
+  "dateRange": {
+    "start": "Inici",
+    "end": "Fi"
+  },
+  "languageSelector": {
+    "headings": {
+      "euOfficial": "Idiomes oficials de la UE",
+      "nonEuOfficial": "Idiomes no oficials a la UE"
+    },
+    "languageLabels": {
+      "en": "Anglès",
+      "es": "Castellà",
+      "ca": "Català",
+      "va": "Valencià",
+      "gl": "Gallec",
+      "eu": "Basc"
+    }
+  },
+  "privateArea": "Àrea Privada",
+  "eui.euitable.ITEMS-PER-PAGE": "Mostra",
+  "eui.euitable.SHOWING-RANGE": "{{range}}",
+  "eui.euitable.RANGE-LABEL": "de",
+  "eui.languageSelector.modalTitle": "Seleccionar llengua"
+}

@@ -1,0 +1,46 @@
+<eui-page>
+  <eui-page-header [label]="'agentConfiguration.credentialsDetail.title' | translate">
+    <eui-page-header-action-items>
+      @let canDownloadCsr = ((keypairDetails() | async)?.[0])?.csr;
+      <div [euiTooltip]="'agentConfiguration.credentialsDetail.noCsr' | translate" [isDisabled]="canDownloadCsr">
+        <button [disabled]="!canDownloadCsr" data-testid="keypair_header_button_downloadcsr" euiButton euiPrimary (click)="downloadCSR()">
+          <eui-icon-svg icon="eui-ecl-download" />
+          <span euiLabel>{{ 'agentConfiguration.credentialsDetail.downloadCSR' | translate }}</span>
+        </button>
+      </div>
+      <button data-testid="keypair_header_button_newcredential" euiButton euiPrimary (click)="newCredentialDialogOpen.set(true)">
+        <span euiLabel>{{ 'agentConfiguration.credentialsDetail.newCredential' | translate }}</span>
+      </button>
+    </eui-page-header-action-items>
+  </eui-page-header>
+  <eui-page-content>
+    <eui-block-content [isBlocked]="(keypairDetails() | async) === null">
+      <table euiTableV2 [isTableResponsive]="true" [data]="((keypairDetails()) | async) ?? []" class="ednel-table-without-paginator">
+        <ng-template euiTemplate="header">
+          <tr>
+            <th>{{ 'agentConfiguration.credentialsDetail.table.name' | translate }}</th>
+            <th>{{ 'agentConfiguration.credentialsDetail.table.creationDate' | translate }}</th>
+          </tr>
+        </ng-template>
+        <ng-template let-row euiTemplate="body">
+          <tr>
+            <td [attr.data-col-label]="'agentConfiguration.credentialsDetail.table.name' | translate">{{ row.name }}</td>
+            <td [attr.data-col-label]="'agentConfiguration.credentialsDetail.table.creationDate' | translate">{{ row.creationTimestamp | i18nDate }}</td>
+          </tr>
+        </ng-template>
+      </table>
+    </eui-block-content>
+    <eui-tabs>
+      <eui-tab>
+        <eui-tab-label>{{ 'agentConfiguration.wizard.credentials' | translate }}</eui-tab-label>
+        <eui-tab-content>
+          <app-credentials [id]="id()"></app-credentials>
+        </eui-tab-content>
+      </eui-tab>
+    </eui-tabs>
+  </eui-page-content>
+</eui-page>
+
+@if (newCredentialDialogOpen()) {
+  <app-csr-export (dialogClose)="onDialogClose($event)" [shouldSendCsrToAuthority]="true" [keypairId]="id()!"></app-csr-export>
+}

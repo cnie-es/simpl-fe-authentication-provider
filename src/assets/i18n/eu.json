@@ -1,0 +1,296 @@
+{
+  "credentialsNotInstalled": "Une honetan zure agenteak ez du kredentzialen aktiborik",
+  "filters": {
+    "from": "Noiztik",
+    "to": "Noiz arte",
+    "status": {
+      "VALID": "BALIOZKOA",
+      "EXPIRED": "IRAUNGITA",
+      "REVOKED": "ERREBOKATUA",
+      "SUSPENDED": "ETENDUA"
+    },
+    "selectedCriteria": "Hautatutako irizpideak",
+    "clearAll": "Guztiak garbitu"
+  },
+  "common": {
+    "yes": "Bai",
+    "actionCompleted": "Ekintza Osatua",
+    "actionFailed": "Ekintza Huts Egin Du",
+    "no": "Ez",
+    "signout": "Saioa itxi"
+  },
+  "title": "Ongi etorri ${DATASPACE_NAME}(e)ra",
+  "participantUtilities": "Partaidearen tresnak",
+  "utilitiesDescription": "Hemen zure konexioaren egoera egiaztatzeko tresna batzuk aurki ditzakezu",
+  "echo": {
+    "title": "/echo",
+    "subTitle": "Hau zure agentearen /echo orria da. Hemen zure identitate tokenean dagoen informazio guztia berreskuratu dezakezu",
+    "key1": "Identitate Atributua",
+    "username": "Erabiltzaile-izena",
+    "email": "Helbide elektronikoa",
+    "userRole": "Erabiltzaile Rola",
+    "identityAttributes": "Identitate atributuak",
+    "assignedIdentityAttributes": "Identitate atributu esleituta",
+    "key4": "Partaide mota",
+    "close": "Itxi",
+    "noData": "Daturik ez",
+    "connectionStatus": "Konexioaren egoera",
+    "mtlsStatus": "mTLS Egoera",
+    "commonName": "Izen arrunta",
+    "organization": "Erakundea",
+    "upload-credential-page": "Kargatu kreditagiriak",
+    "echo-tier-1": "Echo 1. maila",
+    "echo": "Echo",
+    "participantType": "Partaide mota",
+    "upload-credential-title": "Kreditagiriak instalatu gabe",
+    "upload-credential-title-2": "Kreditagiriak instalatzen",
+    "upload-credential-message-1": "Une honetan ezin duzu agente hau edo beste bat erabili, zure kontuan baliozko kreditagiririk ez dagoela egiaztatu ezin dugulako.",
+    "upload-credential-message-2": "Mesedez, instalatu baliozko kreditagiriak eta saiatu berriro.",
+    "upload-credential-message-success": "Kreditagiriak behar bezala kargatu dira",
+    "upload-credential-message-wait": "Mesedez, itxaron sistemak zure kreditagiriak deskargatu eta balioztatu bitartean, segundo batzuk iraun beharko luke",
+    "upload-credential-submit": "Kargatu zure kreditagiriak",
+    "invalidCertificate": "Ziurtagiri baliogabea",
+    "notConnectedAlert": "Konexio hau ez da segurua, Datu Espazioaren Gobernu Agintariaren zerbitzua une honetan aldi baterako eskuraezin dagoelako.",
+    "endUserAssignedIdentityAttribute": "Azken erabiltzaileari esleitutako identitate atributuak",
+    "connectionStatusOk": "Agenteak gobernu agintariarekin konektatu ahal izan du",
+    "connectionStatusKo": "Agenteak ezin du gobernu agintariarekin konektatu",
+    "mtlsStatusOk": "Kreditagiri aktibo eta errebokatugabe bat instalatuta dago agente honetan",
+    "mtlsStatusKo": "Ez dago kreditagiri aktibo eta errebokatugabe bat instalatuta agente honetan"
+  },
+  "ping": {
+    "title": "/ping",
+    "ping": "Ping",
+    "subTitle": "Hau zure agentearen /ping orria da, testu-eremu bat bete dezakezu konektatu nahi duzun agentearen tier2 gateway helburuaren FQDN zehaztuz, gero konexio-probaren eskaera bidali",
+    "FQDNLabel": "Helmugako tier2 gateway FQDN",
+    "FQDNPlaceholder": "Idatzi helbidea hemen",
+    "echoButton": "ping",
+    "connectionSuccess": "Konexioa behar bezala ezarri da.",
+    "connectionNotSuccess": "Ezin izan da konexioa ezarri."
+  },
+  "landing-pages": {
+    "unauthorized": {
+      "title": "Rolaren Arabera Mugatutako Sarbidea",
+      "message": "Sarrera ukatua. Zure rolak ez du eduki hau ikusteko baimenik."
+    },
+    "error-page": {
+      "title": "Errorea",
+      "message": {
+        "400": "Zerbitzariak ezin izan du zure eskaera ulertu sintaxi gaizki osatua edo parametro baliogabeak direla eta. Mesedez, egiaztatu bidalitako datuak.",
+        "401": "Ez zaude baimenduta baliabide honetara sartzeko. Mesedez, ziurtatu saioa hasi duzula kredentzialekin zuzenarekin.",
+        "403": "Ez duzu baliabide honetara sartzeko baimenik. Egiaztatu zure sarbide-pribilegoak.",
+        "404": "Bilatzen ari zaren baliabidea ezin izan da zerbitzarian aurkitu. Mesedez, egiaztatu URLa edo jarri harremanetan laguntza zerbitzuarekin.",
+        "500": "Zerbitzariak barne errore bat topatu du eta ezin izan du zure eskaera osatu. Mesedez, saiatu berriro geroago.",
+        "501": "Zerbitzariak ez du onartzen eskaera betetzeko beharrezkoa den funtzionalitatea.",
+        "502": "Zerbitzariak, gateway gisa jardunez, upstream zerbitzaritik erantzun baliogabe bat jaso du.",
+        "503": "Zerbitzaria une honetan ez dago eskuragarri gainzama edo mantentze-lanen ondorioz. Mesedez, saiatu berriro geroago.",
+        "504": "Zerbitzariak, gateway gisa jardunez, ez du garaiz erantzunik jaso upstream zerbitzaritik.",
+        "505": "Zerbitzariak ez du onartzen eskaeran erabilitako HTTP protokolo bertsioa.",
+        "508": "Zerbitzariak begiztatu infinitu bat detektatu du eskaera prozesatzean.",
+        "511": "Bezeroak autentifikatu egin behar du sareko sarbidea lortzeko."
+      }
+    }
+  },
+  "agentConfiguration": {
+    "title": "Agentearen Konfigurazioa",
+    "filters": "Iragazkiak",
+    "noKeyPairs": "Ez dago gako-parerik eskuragarri agente honetarako une honetan",
+    "keypairDetail": "Ikusi gako-parearen xehetasunak",
+    "tabs": {
+      "generateKeypair": "Sortu gako-parea",
+      "importKeypair": "Inportatu gako-parea",
+      "generateCsr": "Sortu CSR",
+      "importCredentials": "Inportatu kreditagiriak"
+    },
+    "credentialsDetail": {
+      "getCredentialsDetailError": "Errore bat gertatu da kreditagirien xehetasunak eskuratzen. Mesedez, saiatu berriro geroago.",
+      "title": "Gako-parearen xehetasunak",
+      "newCredential": "Eskatu kreditagiri berria",
+      "downloadCSR": "Deskargatu CSR",
+      "noCsr": "Ez dago CSRik eskuragarri kreditagiri honetarako une honetan",
+      "credentialInstallError": "Errore bat gertatu da kreditagiriak instalatzen. Mesedez, saiatu berriro geroago.",
+      "credentialInstallSuccess": "Kreditagiriak behar bezala instalatu dira",
+      "installCredentialDialogTitle": "Instalatu kreditagiriak",
+      "subTitle": "Kreditagiri hau instalatzera zoaz:",
+      "installCredentialDialogMessage": "Kontuan izan kreditagiri bat instalatzeak aurretik kargatutako kreditagiri guztiak baliogabetu egingo dituela.",
+      "confirmationQuestion": "Jarraitu nahi duzu?",
+      "issuanceDateLabel": "Jaulkipen-data: ",
+      "credentialIdLabel": "Kreditagiri IDa: ",
+      "newCredentialsRequested": "Kreditagiri berri bat behar bezala eskatu duzu",
+      "credentialId": "Kreditagiri IDa",
+      "table": {
+        "publicKey": "Gako publikoa",
+        "name": "Izena",
+        "creationDate": "Sortze-data"
+      },
+      "filters": {
+        "issuanceDateRange": "Jaulkipen-data",
+        "expirationDateRange": "Iraungitze-data",
+        "title": "Iragazkiak",
+        "status": "Egoera",
+        "valid": "Baliozkoa",
+        "expired": "Iraungita",
+        "revoked": "Errebokatua",
+        "suspended": "Etendua",
+        "placeholder": {
+          "status": "Hautatu egoera"
+        }
+      },
+      "credentials": {
+        "actions": "Ekintzak",
+        "active": "Aktiboa",
+        "status": "Egoera",
+        "issuanceDate": "Jaulkipen-data",
+        "expirationDate": "Iraungitze-data",
+        "installCredential": "Instalatu kreditagiriak",
+        "installNotPermitted": "Kreditagiri hau ezin da instalatu",
+        "noCredentials": "Ez dago kreditagiririk eskuragarri gako-pare honetarako"
+      }
+    },
+    "wizard": {
+      "keypair": "Gako-parea",
+      "message": "Hiru urratseko prozesu honek zure kreditagiriak konfiguratzeko gidatuko zaitu. Behin osatuta, kreditagiri bat behar bezala konfiguratu eta aktibatuko duzu, datu-espazioan sarbidea eta komunikazioa ahalbidetuz.",
+      "keypairMessage": "Urrats honetan, gako-pare berri bat sortzen da agentean. Bat berria sor dezakezu edo lehendik dagoen gako-pare bat inportatu.",
+      "csrMessage": "Ziurtagiri Sinadura Eskaera (CSR) bat sortuko da eta hautatutako gako-parearekin lotuko da. Behin sortuta, deskargatu eta Gobernu Agintariari bidali dezakezu onboarding prozesua osatzeko.",
+      "credentialsMessage": "Gobernu Agintariarekiko kreditagiriak lortu ondoren, hemen inportatu ditzakezu agentearen konfigurazioa amaitzeko.",
+      "CSR": "CSR",
+      "credentials": "Kreditagiriak",
+      "uploadFile": "Fitxategia kargatu"
+    },
+    "importCredentials": "Inportatu kreditagiriak",
+    "active": "Aktiboa",
+    "name": "Izena",
+    "creationTimestamp": "Sortze-data",
+    "actions": "Ekintzak",
+    "csr": "Sortu CSR berria",
+    "generateKeyPairDescription": "Sortu gako-pare publiko bat barnean. Prozedura honek parea sortuko du eta automatikoki gordeko du agentearen barruan.",
+    "generateKeyPairButton": "Sortu Gako Publiko/Pribatu Parea",
+    "keypairGeneration": {
+      "title": "Sortu gako-parea",
+      "description": "Gako publiko/pribatu pare berri bat sortuko da eta agentean gordeko da.",
+      "name": "Gako-parearen izena",
+      "message-1": "Kontuan izan gako-pare bat sortzeak aurretik kargatutako kreditagiri guztiak baliogabetu egingo dituela.",
+      "message-2": "Jarraitu nahi duzu?",
+      "cancel": "Ezeztatu",
+      "confirm": "Sortu gako-parea",
+      "loading": "Mesedez, itxaron sistemak gako-parea sortzen duen bitartean",
+      "success": "Gako-parea behar bezala sortu eta agentearen konfigurazioan gorde da.",
+      "error": "Gako-parearen sorrerak huts egin du. Mesedez, saiatu berriro geroago.",
+      "privateKey": "Gako pribatua",
+      "publicKey": "Gako publikoa",
+      "ok": "Ados"
+    },
+    "importKeypair": {
+      "success": "Gako-parearen inportazioa behar bezala osatu da",
+      "error": "Gako-parearen inportazioak huts egin du. Mesedez, saiatu berriro geroago.",
+      "importKeyPairDescription": "Itsatsi gako pribatua eta publikoa testu-eremuetan edo kargatu fitxategiak",
+      "pastePrivateKeyPlaceholder": "Itsatsi gako pribatua hemen",
+      "uploadPrivateKey": "Kargatu gako pribatua",
+      "delete": "Ezabatu",
+      "pastePublicKeyPlaceholder": "Itsatsi gako publikoa hemen",
+      "requiredField": "Eremu hau derrigorrezkoa da",
+      "uploadPublicKey": "Kargatu gako publikoa",
+      "algoInfo": "Zure agentea 256 biteko ECDSA gakoekin konfiguratuta badago, gako publiko/pribatu parea openSSL komando hauek jarraituz sortu behar duzu:",
+      "otherCases": "Beste konfigurazio kasu guztietan, mesedez, openSSL dokumentazioa kontsultatu egokia den gako-pare bat sortzeko",
+      "importKeyPair": "Inportatu gako-parea",
+      "privateKeyPlaceholder": "Itsatsi gako pribatua hemen",
+      "moreDetails": "Xehetasun gehiago",
+      "lessDetails": "Xehetasun gutxiago",
+      "clipboard": "Kopiatu arbelera",
+      "copied": "Kopiatuta!",
+      "publicKeyPlaceholder": "Itsatsi gako publikoa hemen"
+    },
+    "csrGeneration": {
+      "certificateSigningRequestDescription": "Aktibatu ziurtagiri sinadura eskaera",
+      "launchCertificateSigningRequest": "Abiarazi Ziurtagiri Sinadura Eskaera",
+      "titleCredential": "Eskatu kreditagiri berria",
+      "title": "CSRaren xehetasunak",
+      "message": "Mesedez, bete Distinguished Name parametro beharrezkoak CSRarekin jarraitzeko.",
+      "messageCredential": "Mesedez, bete Distinguished Name parametro beharrezkoak kreditagiri berriaren eskaerararekin jarraitzeko.",
+      "cancel": "Ezeztatu",
+      "confirm": "Bidali",
+      "loading": "Mesedez, itxaron sistemak CSR sortzen duen bitartean",
+      "submit": "Bidali",
+      "download": "Deskargatu orain",
+      "success": "CSR behar bezala sortu eta deskargatu da.",
+      "error": "Errore bat gertatu da zure CSR aktibatzen. Mesedez, saiatu berriro geroago.",
+      "ok": "Ados"
+    },
+    "csrDetails": {
+      "commonName": "Izen arrunta (CN)",
+      "commonNamePlaceholder": "Izen arrunta",
+      "organisation": "Erakundea (O)",
+      "organisationPlaceholder": "Erakundea",
+      "organisationUnit": "Erakunde Unitatea (OU)",
+      "organisationUnitPlaceholder": "Erakunde Unitatea",
+      "country": "Herrialdea (C)",
+      "countryPlaceholder": "Herrialdea"
+    },
+    "credentialsImport": {
+      "credentialsImportDescription": "Inportatu kreditagiriak agentera",
+      "launchCredentialsUpload": "Kargatu zure kreditagiriak",
+      "title": "Kargatu kreditagiriak",
+      "message": "Kontuan izan kreditagiri multzo bat kargatzeak aurretik kargatutako guztiak baliogabetu egingo dituela.",
+      "message2": "Jarraitu nahi duzu?",
+      "cancel": "Ezeztatu",
+      "confirm": "Kargatu kreditagiriak",
+      "success": "Kreditagiriak behar bezala kargatu eta agentean gorde dira.",
+      "error": "Kreditagirien kargak huts egin du. Mesedez, saiatu berriro geroago.",
+      "ok": "Ados",
+      "loading": "Mesedez, itxaron kreditagiriak kargatzen diren bitartean"
+    },
+    "csrFilters": {
+      "name": "Izena",
+      "active": "Aktiboa",
+      "yes": "bai",
+      "no": "ez",
+      "dateRange": "Sortze-data",
+      "reset": "Berrezarri",
+      "apply": "Aplikatu",
+      "placeholder": {
+        "name": "Sartu izena",
+        "active": "Hautatu aktiboa",
+        "dateRange": "Hautatu sortze dataren barrutia"
+      }
+    },
+    "updateAndInstall": "Instalatu kreditagiriak",
+    "newKeypair": "Gako-pare berria",
+    "generateNew": "Sortu berria",
+    "import": "Inportatu berria",
+    "automaticRenewalConfiguration": {
+      "title": "Gaitu kreditagirien berritzea automatikoa",
+      "errorMessage": "Zerbait gaizki joan da. Mesedez, saiatu berriro."
+    },
+    "reasonLabel": "Kreditagiri berrien arrazoia"
+  },
+  "agentConfigurationFilters": {
+    "filters": {
+      "name": "Izena",
+      "active": "Aktiboa",
+      "updateTimestampFrom": "Sortze-data noiztik",
+      "updateTimestampTo": "Sortze-data noiz arte"
+    }
+  },
+  "dateRange": {
+    "start": "Hasiera",
+    "end": "Amaiera"
+  },
+  "languageSelector": {
+    "headings":{
+      "euOfficial": "EBko hizkuntza ofizialak",
+      "nonEuOfficial": "EBkoak ez diren hizkuntzak"
+    },
+    "languageLabels": {
+      "en": "Ingelesa",
+      "es": "Gaztelania",
+      "ca": "Katalana",
+      "va": "Valentziera",
+      "gl": "Galiziera",
+      "eu": "Euskara"
+    }
+  },
+  "privateArea": "Eremu Pribatua",
+  "eui.euitable.ITEMS-PER-PAGE": "Erakutsi",
+  "eui.euitable.SHOWING-RANGE": "{{range}}",
+  "eui.euitable.RANGE-LABEL": "tik",
+  "eui.languageSelector.modalTitle": "Hizkuntza hautatu"
+}

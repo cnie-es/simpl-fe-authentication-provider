@@ -1,0 +1,296 @@
+{
+  "credentialsNotInstalled": "Actualmente o teu axente non ten ningunha credencial activa",
+  "filters": {
+    "from": "Desde",
+    "to": "Ata",
+    "status": {
+      "VALID": "VÁLIDO",
+      "EXPIRED": "CADUCADO",
+      "REVOKED": "REVOGADO",
+      "SUSPENDED": "SUSPENDIDO"
+    },
+    "selectedCriteria": "Criterios seleccionados",
+    "clearAll": "Limpar todo"
+  },
+  "common": {
+    "yes": "Si",
+    "actionCompleted": "Acción Completada",
+    "actionFailed": "Acción Fallida",
+    "no": "Non",
+    "signout": "Pechar sesión"
+  },
+  "title": "Benvido a ${DATASPACE_NAME}",
+  "participantUtilities": "Utilidades do participante",
+  "utilitiesDescription": "Aquí podes atopar algunhas utilidades para verificar o estado da túa conexión",
+  "echo": {
+    "title": "/echo",
+    "subTitle": "Esta é a páxina /echo do teu axente. Aquí podes recuperar toda a información contida no teu token de identidade",
+    "key1": "Atributo de Identidade",
+    "username": "Nome de usuario",
+    "email": "Enderezo de correo electrónico",
+    "userRole": "Rol de usuario",
+    "identityAttributes": "Atributos de identidade",
+    "assignedIdentityAttributes": "Atributos de identidade asignados",
+    "key4": "Tipo de participante",
+    "close": "Pechar",
+    "noData": "Sen datos",
+    "connectionStatus": "Estado de conexión",
+    "mtlsStatus": "Estado mTLS",
+    "commonName": "Nome común",
+    "organization": "Organización",
+    "upload-credential-page": "Cargar credencial",
+    "echo-tier-1": "Echo Nivel 1",
+    "echo": "Echo",
+    "participantType": "Tipo de participante",
+    "upload-credential-title": "Credenciais non instaladas",
+    "upload-credential-title-2": "Instalando credenciais",
+    "upload-credential-message-1": "Actualmente non podes usar este ou outro axente porque non podemos verificar a presenza de credenciais válidas na túa conta.",
+    "upload-credential-message-2": "Por favor instala un conxunto de credenciais válidas e téntao de novo.",
+    "upload-credential-message-success": "Credencial cargada correctamente",
+    "upload-credential-message-wait": "Por favor agarda mentres o sistema desempaqueta e valida as túas credenciais, isto debería levar uns segundos",
+    "upload-credential-submit": "Carga a túa credencial",
+    "invalidCertificate": "Certificado inválido",
+    "notConnectedAlert": "Esta conexión non é segura debido a que o servizo da Autoridade de Gobernanza do Espazo de Datos non está dispoñible temporalmente neste momento.",
+    "endUserAssignedIdentityAttribute": "Atributos de identidade asignados ao usuario final",
+    "connectionStatusOk": "O axente puido conectarse coa autoridade de gobernanza",
+    "connectionStatusKo": "O axente non pode conectarse coa autoridade de gobernanza",
+    "mtlsStatusOk": "Hai unha credencial activa e non revogada instalada neste axente",
+    "mtlsStatusKo": "Non hai unha credencial activa e non revogada instalada neste axente"
+  },
+  "ping": {
+    "title": "/ping",
+    "ping": "Ping",
+    "subTitle": "Esta é a páxina /ping do teu axente, tes a posibilidade de completar un campo de texto especificando o FQDN de destino do gateway tier2 do axente que queres contactar, logo enviar a solicitude de proba de conexión",
+    "FQDNLabel": "FQDN do gateway tier2 de destino",
+    "FQDNPlaceholder": "Escribe o enderezo aquí",
+    "echoButton": "ping",
+    "connectionSuccess": "Conexión establecida correctamente.",
+    "connectionNotSuccess": "Non se puido establecer a conexión."
+  },
+  "landing-pages": {
+    "unauthorized": {
+      "title": "Acceso Restrinxido por Rol",
+      "message": "Acceso denegado. O teu rol non ten permiso para ver este contido."
+    },
+    "error-page": {
+      "title": "Erro",
+      "message": {
+        "400": "O servidor non puido entender a túa solicitude debido a unha sintaxe mal formada ou parámetros inválidos. Por favor verifica os datos que enviaches.",
+        "401": "Non estás autorizado para acceder a este recurso. Por favor asegúrate de ter iniciado sesión coas credenciais correctas.",
+        "403": "Non tes permiso para acceder a este recurso. Verifica os teus privilexios de acceso.",
+        "404": "O recurso que buscas non se puido atopar no servidor. Por favor verifica a URL ou contacta co soporte.",
+        "500": "O servidor atopou un erro interno e non puido completar a túa solicitude. Por favor téntao de novo máis tarde.",
+        "501": "O servidor non soporta a funcionalidade requirida para cumprir coa solicitude.",
+        "502": "O servidor, actuando como gateway, recibiu unha resposta inválida do servidor upstream.",
+        "503": "O servidor non está dispoñible actualmente debido a sobrecarga ou mantemento. Por favor téntao de novo máis tarde.",
+        "504": "O servidor, actuando como gateway, non recibiu unha resposta oportuna do servidor upstream.",
+        "505": "O servidor non soporta a versión do protocolo HTTP utilizada na solicitude.",
+        "508": "O servidor detectou un bucle infinito ao procesar a solicitude.",
+        "511": "O cliente debe autenticarse para obter acceso á rede."
+      }
+    }
+  },
+  "agentConfiguration": {
+    "title": "Configuración do Axente",
+    "filters": "Filtros",
+    "noKeyPairs": "Non hai pares de chaves dispoñibles para este axente neste momento",
+    "keypairDetail": "Ver detalles do par de chaves",
+    "tabs": {
+      "generateKeypair": "Xerar par de chaves",
+      "importKeypair": "Importar par de chaves",
+      "generateCsr": "Xerar CSR",
+      "importCredentials": "Importar credenciais"
+    },
+    "credentialsDetail": {
+      "getCredentialsDetailError": "Houbo un erro ao recuperar os detalles das credenciais. Por favor téntao de novo máis tarde.",
+      "title": "Detalles do par de chaves",
+      "newCredential": "Solicitar nova credencial",
+      "downloadCSR": "Descargar CSR",
+      "noCsr": "Non hai ningún CSR dispoñible para esta credencial neste momento",
+      "credentialInstallError": "Houbo un erro ao instalar a credencial. Por favor téntao de novo máis tarde.",
+      "credentialInstallSuccess": "Credencial instalada correctamente",
+      "installCredentialDialogTitle": "Instalar credencial",
+      "subTitle": "Estás a piques de instalar a seguinte credencial:",
+      "installCredentialDialogMessage": "Ten en conta que instalar unha credencial invalidará todas as credenciais previamente cargadas.",
+      "confirmationQuestion": "Desexas continuar?",
+      "issuanceDateLabel": "Data de emisión: ",
+      "credentialIdLabel": "ID de credencial: ",
+      "newCredentialsRequested": "Solicitaches correctamente unha nova credencial",
+      "credentialId": "ID de credencial",
+      "table": {
+        "publicKey": "Chave pública",
+        "name": "Nome",
+        "creationDate": "Data de creación"
+      },
+      "filters": {
+        "issuanceDateRange": "Data de emisión",
+        "expirationDateRange": "Data de expiración",
+        "title": "Filtros",
+        "status": "Estado",
+        "valid": "Válido",
+        "expired": "Caducado",
+        "revoked": "Revogado",
+        "suspended": "Suspendido",
+        "placeholder": {
+          "status": "Seleccionar estado"
+        }
+      },
+      "credentials": {
+        "actions": "Accións",
+        "active": "Activo",
+        "status": "Estado",
+        "issuanceDate": "Data de emisión",
+        "expirationDate": "Data de expiración",
+        "installCredential": "Instalar credencial",
+        "installNotPermitted": "Esta credencial non pode ser instalada",
+        "noCredentials": "Non hai credenciais dispoñibles para este par de chaves"
+      }
+    },
+    "wizard": {
+      "keypair": "Par de chaves",
+      "message": "Este proceso de tres pasos guiarate a través da configuración das túas credenciais. Unha vez completado, configuraches e activaches correctamente unha credencial, permitindo o acceso e a comunicación dentro do espazo de datos.",
+      "keypairMessage": "Neste paso, créase un novo par de chaves no axente. Podes xerar un novo ou importar un par de chaves existente.",
+      "csrMessage": "Xerarase unha Solicitude de Firma de Certificado (CSR) e asociarase co par de chaves seleccionado. Unha vez creado, podes descargalo e envialo á Autoridade de Gobernanza para completar o proceso de incorporación.",
+      "credentialsMessage": "Despois de obter a credencial da Autoridade de Gobernanza, podes importala aquí para finalizar a configuración do axente.",
+      "CSR": "CSR",
+      "credentials": "Credenciais",
+      "uploadFile": "Cargar ficheiro"
+    },
+    "importCredentials": "Importar credenciais",
+    "active": "Activo",
+    "name": "Nome",
+    "creationTimestamp": "Data de creación",
+    "actions": "Accións",
+    "csr": "Xerar novo CSR",
+    "generateKeyPairDescription": "Xerar un par de chaves públicas internamente. Este procedemento creará o par e almacenaralo automaticamente dentro do axente.",
+    "generateKeyPairButton": "Xerar Par de Chaves Pública/Privada",
+    "keypairGeneration": {
+      "title": "Xerar par de chaves",
+      "description": "Xerarase un novo par de chaves pública/privada e almacerarase no axente.",
+      "name": "Nome do par de chaves",
+      "message-1": "Ten en conta que xerar un par de chaves invalidará todas as credenciais previamente cargadas.",
+      "message-2": "Desexas continuar?",
+      "cancel": "Cancelar",
+      "confirm": "Xerar par de chaves",
+      "loading": "Por favor agarda mentres o sistema xera o par de chaves",
+      "success": "Par de chaves xerado correctamente e almacenado na configuración do axente.",
+      "error": "A xeración do par de chaves fallou. Por favor téntao de novo máis tarde.",
+      "privateKey": "Chave privada",
+      "publicKey": "Chave pública",
+      "ok": "Aceptar"
+    },
+    "importKeypair": {
+      "success": "Importación de par de chaves completada correctamente",
+      "error": "A importación do par de chaves fallou. Por favor téntao de novo máis tarde.",
+      "importKeyPairDescription": "Pega a chave privada e pública nas áreas de texto ou carga os ficheiros",
+      "pastePrivateKeyPlaceholder": "Pega a chave privada aquí",
+      "uploadPrivateKey": "Cargar chave privada",
+      "delete": "Eliminar",
+      "pastePublicKeyPlaceholder": "Pega a chave pública aquí",
+      "requiredField": "Este campo é obrigatorio",
+      "uploadPublicKey": "Cargar chave pública",
+      "algoInfo": "Se o teu axente está configurado con chaves ECDSA de 256 bits, debes xerar o par de chaves pública/privada seguindo estes comandos de openSSL:",
+      "otherCases": "En todos os demais casos de configuración, por favor consulta a documentación de openSSL para crear un par de chaves adecuado",
+      "importKeyPair": "Importar par de chaves",
+      "privateKeyPlaceholder": "Pega a chave privada aquí",
+      "moreDetails": "Máis detalles",
+      "lessDetails": "Menos detalles",
+      "clipboard": "Copiar ao portapapeis",
+      "copied": "Copiado!",
+      "publicKeyPlaceholder": "Pega a chave pública aquí"
+    },
+    "csrGeneration": {
+      "certificateSigningRequestDescription": "Activar unha solicitude de firma de certificado",
+      "launchCertificateSigningRequest": "Lanzar Solicitude de Firma de Certificado",
+      "titleCredential": "Solicitar nova credencial",
+      "title": "Detalles do CSR",
+      "message": "Por favor completa os parámetros necesarios do Nome Distinguido para proceder co CSR.",
+      "messageCredential": "Por favor completa os parámetros necesarios do Nome Distinguido para proceder coa solicitude de nova credencial.",
+      "cancel": "Cancelar",
+      "confirm": "Enviar",
+      "loading": "Por favor agarda mentres o sistema xera o CSR",
+      "submit": "Enviar",
+      "download": "Descargar agora",
+      "success": "CSR xerado e descargado correctamente.",
+      "error": "Houbo un erro ao activar o teu CSR. Por favor téntao de novo máis tarde.",
+      "ok": "Aceptar"
+    },
+    "csrDetails": {
+      "commonName": "Nome común (CN)",
+      "commonNamePlaceholder": "Nome común",
+      "organisation": "Organización (O)",
+      "organisationPlaceholder": "Organización",
+      "organisationUnit": "Unidade de Organización (OU)",
+      "organisationUnitPlaceholder": "Unidade de Organización",
+      "country": "País (C)",
+      "countryPlaceholder": "País"
+    },
+    "credentialsImport": {
+      "credentialsImportDescription": "Importar credenciais ao axente",
+      "launchCredentialsUpload": "Carga as túas credenciais",
+      "title": "Cargar credenciais",
+      "message": "Ten en conta que cargar un conxunto de credenciais invalidará todas as previamente cargadas.",
+      "message2": "Desexas continuar?",
+      "cancel": "Cancelar",
+      "confirm": "Cargar credenciais",
+      "success": "Credenciais cargadas correctamente e almacenadas no axente.",
+      "error": "A carga de credenciais fallou. Por favor téntao de novo máis tarde.",
+      "ok": "Aceptar",
+      "loading": "Por favor agarda mentres se cargan as credenciais"
+    },
+    "csrFilters": {
+      "name": "Nome",
+      "active": "Activo",
+      "yes": "si",
+      "no": "non",
+      "dateRange": "Data de creación",
+      "reset": "Restablecer",
+      "apply": "Aplicar",
+      "placeholder": {
+        "name": "Introducir nome",
+        "active": "Seleccionar activo",
+        "dateRange": "Seleccionar rango de datas de creación"
+      }
+    },
+    "updateAndInstall": "Instalar credencial",
+    "newKeypair": "Novo par de chaves",
+    "generateNew": "Xerar novo",
+    "import": "Importar novo",
+    "automaticRenewalConfiguration": {
+      "title": "Habilitar renovación automática de credenciais",
+      "errorMessage": "Algo saíu mal. Por favor téntao de novo."
+    },
+    "reasonLabel": "Motivo das novas credenciais"
+  },
+  "agentConfigurationFilters": {
+    "filters": {
+      "name": "Nome",
+      "active": "Activo",
+      "updateTimestampFrom": "Data de creación desde",
+      "updateTimestampTo": "Data de creación ata"
+    }
+  },
+  "dateRange": {
+    "start": "Inicio",
+    "end": "Fin"
+  },
+  "languageSelector": {
+    "headings":{
+      "euOfficial": "Idiomas oficiais da UE",
+      "nonEuOfficial": "Idiomas non oficiais na UE"
+    },
+    "languageLabels": {
+      "en": "Inglés",
+      "es": "Castelán",
+      "ca": "Catalán",
+      "va": "Valenciano",
+      "gl": "Galego",
+      "eu": "Éuscaro"
+    }
+  },
+  "privateArea": "Área Privada",
+  "eui.euitable.ITEMS-PER-PAGE": "Mostrar",
+  "eui.euitable.SHOWING-RANGE": "{{range}}",
+  "eui.euitable.RANGE-LABEL": "de",
+  "eui.languageSelector.modalTitle": "Seleccionar lingua"
+}

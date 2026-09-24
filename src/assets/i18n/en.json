@@ -1,0 +1,296 @@
+{
+  "credentialsNotInstalled": "Currently your agent does not have any active credentials",
+  "filters": {
+    "from": "From",
+    "to": "To",
+    "status": {
+      "VALID": "VALID",
+      "EXPIRED": "EXPIRED",
+      "REVOKED": "REVOKED",
+      "SUSPENDED": "SUSPENDED"
+    },
+    "selectedCriteria": "Selected criteria",
+    "clearAll": "Clear all"
+  },
+  "common": {
+    "yes": "Yes",
+    "actionCompleted": "Action Complete",
+    "actionFailed": "Action Failed",
+    "no": "No",
+    "signout": "Sign out"
+  },
+  "title": "Welcome to ${DATASPACE_NAME}",
+  "participantUtilities": "Participant utilities",
+  "utilitiesDescription": "Here you can find some utilities to check your connection status",
+  "echo": {
+    "title": "/echo",
+    "subTitle": "This is the /echo page of your agent. Here you can retrieve all the information contained within your identity token",
+    "key1": "Identity Attribute",
+    "username": "Username",
+    "email": "Email Address",
+    "userRole": "User Role",
+    "identityAttributes": "Identity Attributes",
+    "assignedIdentityAttributes": "Assigned identity attributes",
+    "key4": "Participant Type",
+    "close": "Close",
+    "noData": "No data",
+    "connectionStatus": "Connection status",
+    "mtlsStatus": "mTLS Status",
+    "commonName": "Common name",
+    "organization": "Organization",
+    "upload-credential-page": "Upload credential",
+    "echo-tier-1": "Echo Tier 1",
+    "echo": "Echo",
+    "participantType": "Participant type",
+    "upload-credential-title": "Credentials not installed",
+    "upload-credential-title-2": "Installing credentials",
+    "upload-credential-message-1": "You are currently unable to use this or any other agent because we can't verify the presence of valid credentials on your account.",
+    "upload-credential-message-2": "Please install a set of valid credentials and try again.",
+    "upload-credential-message-success": "Credential successfully uploaded",
+    "upload-credential-message-wait": "Pleas wait while the system unpacks and  validates your credentials, this should take a few seconds",
+    "upload-credential-submit": "Upload your credential",
+    "invalidCertificate": "Invalid certificate",
+    "notConnectedAlert": "This connection is not secure due to the Dataspace Governance Authority service being temporary unavaiable at this time.",
+    "endUserAssignedIdentityAttribute": "End user assigned identity attributes",
+    "connectionStatusOk": "The agent was able to connect to the governance authority",
+    "connectionStatusKo": "The agent is unable to connect to the governance authority",
+    "mtlsStatusOk": "An active and not revoked credential is installed on this agent",
+    "mtlsStatusKo": "An active and not revoked credential is not installed on this agent"
+  },
+  "ping": {
+    "title": "/ping",
+    "ping": "Ping",
+    "subTitle": "This is the /ping page of your agent have the possibility to fill an input text specifying the destination FQDN tier2 gateway of the agent I want to contact, then submit the connection test request",
+    "FQDNLabel": "Target FQDN tier2 gateway",
+    "FQDNPlaceholder": "Type the address here",
+    "echoButton": "ping",
+    "connectionSuccess": "Connection successfully established.",
+    "connectionNotSuccess": "Connection could not be established."
+  },
+  "landing-pages": {
+    "unauthorized": {
+      "title": "Role Restricted Access",
+      "message": "Access denied. Your role does not grant permission to view this content."
+    },
+    "error-page": {
+      "title": "Error",
+      "message": {
+        "400": "Your request could not be understood by the server due to malformed syntax or invalid parameters. Please check the data you submitted.",
+        "401": "You are not authorized to access this resource. Please ensure you are logged in with the correct credentials.",
+        "403": "You do not have permission to access this resource. Check your access privileges.",
+        "404": "The resource you are looking for could not be found on the server. Please verify the URL or contact support.",
+        "500": "The server encountered an internal error and was unable to complete your request. Please try again later.",
+        "501": "The server does not support the functionality required to fulfill the request.",
+        "502": "The server, acting as a gateway, received an invalid response from the upstream server.",
+        "503": "The server is currently unavailable due to overload or maintenance. Please try again later.",
+        "504": "The server, acting as a gateway, did not receive a timely response from the upstream server.",
+        "505": "The server does not support the HTTP protocol version used in the request.",
+        "508": "The server detected an infinite loop while processing the request.",
+        "511": "The client must authenticate to gain network access."
+      }
+    }
+  },
+  "agentConfiguration": {
+    "title": "Agent Settings",
+    "filters": "Filters",
+    "noKeyPairs": "There are no keypairs available for this agent at the moment",
+    "keypairDetail": "View keypair details",
+    "tabs": {
+      "generateKeypair": "Generate keypair",
+      "importKeypair": "Import keypair",
+      "generateCsr": "Generate CSR",
+      "importCredentials": "Import credentials"
+    },
+    "credentialsDetail": {
+      "getCredentialsDetailError": "There was an error retrieving the credentials details. Please try again later.",
+      "title": "Keypair details",
+      "newCredential": "Request new credential",
+      "downloadCSR": "Download CSR",
+      "noCsr": "There is no CSR available for this credential at the moment",
+      "credentialInstallError": "There was an error installing the credential. Please try again later.",
+      "credentialInstallSuccess": "Credential successfully installed",
+      "installCredentialDialogTitle": "Install credential",
+      "subTitle": "You are about to install the following credential:",
+      "installCredentialDialogMessage": "Please note that installing a credential will invalidate all previously uploaded credentials.",
+      "confirmationQuestion": "Do you want to proceed?",
+      "issuanceDateLabel": "Issuance date: ",
+      "credentialIdLabel": "Credential ID: ",
+      "newCredentialsRequested": "You have succesfully requested a new credential",
+      "credentialId": "Credential ID",
+      "table": {
+        "publicKey": "Public key",
+        "name": "Name",
+        "creationDate": "Creation Date"
+      },
+      "filters": {
+        "issuanceDateRange": "Issuance date",
+        "expirationDateRange": "Expiration date",
+        "title": "Filters",
+        "status": "Status",
+        "valid": "Valid",
+        "expired":"Expired",
+        "revoked": "Revoked",
+        "suspended":"Suspended",
+        "placeholder": {
+          "status": "Select status"
+        }
+      },
+      "credentials" : {
+        "actions": "Actions",
+        "active": "Active",
+        "status": "Status",
+        "issuanceDate": "Issuance date",
+        "expirationDate": "Expiration date",
+        "installCredential": "Install credential",
+        "installNotPermitted": "This credential cannot be installed",
+        "noCredentials": "There are no credentials available for this keypair"
+      }
+    },
+    "wizard": {
+      "keypair": "Keypair",
+      "message": "This three-step process will guide you through setting up your credentials. Once completed, you’ll have successfully configured and activated a credential, allowing access and communication within the data space.",
+      "keypairMessage": "In this step, a new keypair is created within the agent. You can either generate a new one or import an existing keypair.",
+      "csrMessage": "A Certificate Signing Request (CSR) will be generated and associated with the selected keypair. Once created, you can download it and submit it to the Governance Authority to complete the onboarding process.",
+      "credentialsMessage": "After obtaining the credential from the Governance Authority, you can import it here to finalize the agent setup.",
+      "CSR": "CSR",
+      "credentials": "Credentials",
+      "uploadFile": "Upload File"
+    },
+    "importCredentials": "Import credentials",
+    "active": "Active",
+    "name": "Name",
+    "creationTimestamp": "Creation date",
+    "actions": "Actions",
+    "csr": "Generate new CSR",
+    "generateKeyPairDescription": "Generate a public keypair internally. This procedure will create the pair and store it automatically within the agent.",
+    "generateKeyPairButton": "Generate Public/Private Keypair",
+    "keypairGeneration": {
+      "title": "Generate keypair",
+      "description": "A new public/private keypair will be generated and stored in the agent.",
+      "name": "Keypair name",
+      "message-1": "Please note that generating a keypair will invalidate all previously uploaded credentials.",
+      "message-2": "Do you want to proceed?",
+      "cancel": "Cancel",
+      "confirm": "Generate keypair",
+      "loading": "Please wait while the system generates the keypair",
+      "success": "Keypair successfully generated and stored in the agent configuration.",
+      "error": "Keypair generation failed. Please try again later.",
+      "privateKey": "Private key",
+      "publicKey": "Public key",
+      "ok": "OK"
+    },
+    "importKeypair": {
+      "success": "Keypair import successfully completed",
+      "error": "Keypair import failed. Please try again later.",
+      "importKeyPairDescription": "Paste the private and public key in the text areas or upload the files",
+      "pastePrivateKeyPlaceholder": "Paste private key here",
+      "uploadPrivateKey": "Upload private key",
+      "delete": "Delete",
+      "pastePublicKeyPlaceholder": "Paste public key here",
+      "requiredField": "This field is required",
+      "uploadPublicKey": "Upload public key",
+      "algoInfo": "If your agent is configured with ECDSA 256 bit keys you should generate the public/private keypair following these openSSL commands:",
+      "otherCases": "In all other setup cases please refer to the openSSL documentation to create a suitable keypair",
+      "importKeyPair": "Import keypair",
+      "privateKeyPlaceholder": "Paste private key here",
+      "moreDetails": "More details",
+      "lessDetails": "Less details",
+      "clipboard": "Copy to clipboard",
+      "copied": "Copied!",
+      "publicKeyPlaceholder": "Paste public key here"
+    },
+    "csrGeneration": {
+      "certificateSigningRequestDescription": "Trigger a certificate signing request",
+      "launchCertificateSigningRequest": "Launch Certificate Signing Request",
+      "titleCredential": "Request new credential",
+      "title": "CSR details",
+      "message": "Please fill in the necessary Distinguished Name parameters to proceed with the CSR.",
+      "messageCredential": "Please fill in the necessary Distinguished Name parameters to proceed with the new credential request.",
+      "cancel": "Cancel",
+      "confirm": "Submit",
+      "loading": "Please wait while the system generates the CSR",
+      "submit": "Submit",
+      "download": "Download now",
+      "success": "CSR successfully generated and downloaded.",
+      "error": "There was an error triggering your CSR. Please try again later.",
+      "ok": "OK"
+    },
+    "csrDetails": {
+      "commonName": "Common name (CN)",
+      "commonNamePlaceholder":"Common name",
+      "organisation": "Organization (O)",
+      "organisationPlaceholder":"Organization",
+      "organisationUnit": "Organization Unit (OU)",
+      "organisationUnitPlaceholder":"Organization Unit",
+      "country": "Country (C)",
+      "countryPlaceholder":"Country"
+    },
+    "credentialsImport": {
+      "credentialsImportDescription": "Import credentials into the agent",
+      "launchCredentialsUpload": "Upload your credentials",
+      "title": "Upload credentials",
+      "message": "Please note that uploading a set of credentials will invalidate all previously uploaded ones.",
+      "message2": "Do you want to proceed?",
+      "cancel": "Cancel",
+      "confirm": "Upload credentials",
+      "success": "Credentials successfully uploaded and stored in the agent.",
+      "error": "Credentials upload failed. Please try again later.",
+      "ok": "OK",
+      "loading": "Please wait while the credentials are being uploaded"
+    },
+    "csrFilters": {
+      "name": "Name",
+      "active": "Active",
+      "yes": "yes",
+      "no": "no",
+      "dateRange": "Creation date",
+      "reset": "Reset",
+      "apply": "Apply",
+      "placeholder": {
+        "name": "Insert name",
+        "active": "Select active",
+        "dateRange": "Select creation date range"
+      }
+    },
+    "updateAndInstall": "Install credential",
+    "newKeypair": "New Keypair",
+    "generateNew": "Generate new",
+    "import": "Import new",
+    "automaticRenewalConfiguration": {
+      "title": "Enable automatic credential renewal",
+      "errorMessage": "Something went wrong. Please try again."
+    },
+    "reasonLabel": "Reason for new credentials"
+  },
+  "agentConfigurationFilters": {
+    "filters": {
+      "name": "Name",
+      "active": "Active",
+      "updateTimestampFrom": "Creation date from",
+      "updateTimestampTo": "Creation date to"
+    }
+  },
+  "dateRange": {
+    "start": "Start",
+    "end": "End"
+  },
+  "languageSelector": {
+    "headings":{
+      "euOfficial": "EU official languages",
+      "nonEuOfficial": "Non-official EU languages"
+    },
+    "languageLabels": {
+      "en": "English",
+      "es": "Spanish",
+      "ca": "Catalan",
+      "va": "Valencian",
+      "gl": "Galician",
+      "eu": "Basque"
+    }
+  },
+  "privateArea": "Private Area",
+  "eui.euitable.ITEMS-PER-PAGE": "Show",
+  "eui.euitable.SHOWING-RANGE": "{{range}}",
+  "eui.euitable.RANGE-LABEL": "of",
+  "eui.languageSelector.modalTitle": "Select language"
+}

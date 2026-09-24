@@ -1,0 +1,296 @@
+{
+  "credentialsNotInstalled": "Actualmente tu agente no tiene credenciales activas",
+  "filters": {
+    "from": "Desde",
+    "to": "Hasta",
+    "status": {
+      "VALID": "VÁLIDO",
+      "EXPIRED": "EXPIRADO",
+      "REVOKED": "REVOCADO",
+      "SUSPENDED": "SUSPENDIDO"
+    },
+    "selectedCriteria": "Criterios seleccionados",
+    "clearAll": "Limpiar todo"
+  },
+  "common": {
+    "yes": "Sí",
+    "actionCompleted": "Acción Completada",
+    "actionFailed": "Acción Fallida",
+    "no": "No",
+    "signout": "Cerrar sesión"
+  },
+  "title": "Bienvenido a ${DATASPACE_NAME}",
+  "participantUtilities": "Utilidades del participante",
+  "utilitiesDescription": "Aquí puedes encontrar algunas utilidades para verificar el estado de tu conexión",
+  "echo": {
+    "title": "/echo",
+    "subTitle": "Esta es la página /echo de tu agente. Aquí puedes recuperar toda la información contenida en tu token de identidad",
+    "key1": "Atributo de Identidad",
+    "username": "Nombre de usuario",
+    "email": "Dirección de correo electrónico",
+    "userRole": "Rol de usuario",
+    "identityAttributes": "Atributos de identidad",
+    "assignedIdentityAttributes": "Atributos de identidad asignados",
+    "key4": "Tipo de participante",
+    "close": "Cerrar",
+    "noData": "Sin datos",
+    "connectionStatus": "Estado de conexión",
+    "mtlsStatus": "Estado mTLS",
+    "commonName": "Nombre común",
+    "organization": "Organización",
+    "upload-credential-page": "Cargar credencial",
+    "echo-tier-1": "Echo Nivel 1",
+    "echo": "Echo",
+    "participantType": "Tipo de participante",
+    "upload-credential-title": "Credenciales no instaladas",
+    "upload-credential-title-2": "Instalando credenciales",
+    "upload-credential-message-1": "Actualmente no puedes usar este u otro agente porque no podemos verificar la presencia de credenciales válidas en tu cuenta.",
+    "upload-credential-message-2": "Por favor instala un conjunto de credenciales válidas e inténtalo de nuevo.",
+    "upload-credential-message-success": "Credencial cargada correctamente",
+    "upload-credential-message-wait": "Por favor espera mientras el sistema desempaqueta y valida tus credenciales, esto debería tomar unos segundos",
+    "upload-credential-submit": "Carga tu credencial",
+    "invalidCertificate": "Certificado inválido",
+    "notConnectedAlert": "Esta conexión no es segura debido a que el servicio de la Autoridad de Gobernanza del Espacio de Datos no está disponible temporalmente en este momento.",
+    "endUserAssignedIdentityAttribute": "Atributos de identidad asignados al usuario final",
+    "connectionStatusOk": "El agente pudo conectarse a la autoridad de gobernanza",
+    "connectionStatusKo": "El agente no puede conectarse a la autoridad de gobernanza",
+    "mtlsStatusOk": "Hay una credencial activa y no revocada instalada en este agente",
+    "mtlsStatusKo": "No hay una credencial activa y no revocada instalada en este agente"
+  },
+  "ping": {
+    "title": "/ping",
+    "ping": "Ping",
+    "subTitle": "Esta es la página /ping de tu agente, tienes la posibilidad de completar un campo de texto especificando el FQDN de destino del gateway tier2 del agente que quieres contactar, luego enviar la solicitud de prueba de conexión",
+    "FQDNLabel": "FQDN del gateway tier2 de destino",
+    "FQDNPlaceholder": "Escribe la dirección aquí",
+    "echoButton": "ping",
+    "connectionSuccess": "Conexión establecida correctamente.",
+    "connectionNotSuccess": "No se pudo establecer la conexión."
+  },
+  "landing-pages": {
+    "unauthorized": {
+      "title": "Acceso Restringido por Rol",
+      "message": "Acceso denegado. Tu rol no tiene permiso para ver este contenido."
+    },
+    "error-page": {
+      "title": "Error",
+      "message": {
+        "400": "El servidor no pudo entender tu solicitud debido a una sintaxis mal formada o parámetros inválidos. Por favor verifica los datos que enviaste.",
+        "401": "No estás autorizado para acceder a este recurso. Por favor asegúrate de haber iniciado sesión con las credenciales correctas.",
+        "403": "No tienes permiso para acceder a este recurso. Verifica tus privilegios de acceso.",
+        "404": "El recurso que buscas no se pudo encontrar en el servidor. Por favor verifica la URL o contacta con soporte.",
+        "500": "El servidor encontró un error interno y no pudo completar tu solicitud. Por favor inténtalo de nuevo más tarde.",
+        "501": "El servidor no soporta la funcionalidad requerida para cumplir con la solicitud.",
+        "502": "El servidor, actuando como gateway, recibió una respuesta inválida del servidor upstream.",
+        "503": "El servidor no está disponible actualmente debido a sobrecarga o mantenimiento. Por favor inténtalo de nuevo más tarde.",
+        "504": "El servidor, actuando como gateway, no recibió una respuesta oportuna del servidor upstream.",
+        "505": "El servidor no soporta la versión del protocolo HTTP utilizada en la solicitud.",
+        "508": "El servidor detectó un bucle infinito al procesar la solicitud.",
+        "511": "El cliente debe autenticarse para obtener acceso a la red."
+      }
+    }
+  },
+  "agentConfiguration": {
+    "title": "Configuración del Agente",
+    "filters": "Filtros",
+    "noKeyPairs": "No hay pares de claves disponibles para este agente en este momento",
+    "keypairDetail": "Ver detalles del par de claves",
+    "tabs": {
+      "generateKeypair": "Generar par de claves",
+      "importKeypair": "Importar par de claves",
+      "generateCsr": "Generar CSR",
+      "importCredentials": "Importar credenciales"
+    },
+    "credentialsDetail": {
+      "getCredentialsDetailError": "Hubo un error al recuperar los detalles de las credenciales. Por favor inténtalo de nuevo más tarde.",
+      "title": "Detalles del par de claves",
+      "newCredential": "Solicitar nueva credencial",
+      "downloadCSR": "Descargar CSR",
+      "noCsr": "No hay ningún CSR disponible para esta credencial en este momento",
+      "credentialInstallError": "Hubo un error al instalar la credencial. Por favor inténtalo de nuevo más tarde.",
+      "credentialInstallSuccess": "Credencial instalada correctamente",
+      "installCredentialDialogTitle": "Instalar credencial",
+      "subTitle": "Estás a punto de instalar la siguiente credencial:",
+      "installCredentialDialogMessage": "Ten en cuenta que instalar una credencial invalidará todas las credenciales previamente cargadas.",
+      "confirmationQuestion": "¿Deseas continuar?",
+      "issuanceDateLabel": "Fecha de emisión: ",
+      "credentialIdLabel": "ID de credencial: ",
+      "newCredentialsRequested": "Has solicitado correctamente una nueva credencial",
+      "credentialId": "ID de credencial",
+      "table": {
+        "publicKey": "Clave pública",
+        "name": "Nombre",
+        "creationDate": "Fecha de creación"
+      },
+      "filters": {
+        "issuanceDateRange": "Fecha de emisión",
+        "expirationDateRange": "Fecha de expiración",
+        "title": "Filtros",
+        "status": "Estado",
+        "valid": "Válido",
+        "expired": "Expirado",
+        "revoked": "Revocado",
+        "suspended": "Suspendido",
+        "placeholder": {
+          "status": "Seleccionar estado"
+        }
+      },
+      "credentials": {
+        "actions": "Acciones",
+        "active": "Activo",
+        "status": "Estado",
+        "issuanceDate": "Fecha de emisión",
+        "expirationDate": "Fecha de expiración",
+        "installCredential": "Instalar credencial",
+        "installNotPermitted": "Esta credencial no puede ser instalada",
+        "noCredentials": "No hay credenciales disponibles para este par de claves"
+      }
+    },
+    "wizard": {
+      "keypair": "Par de claves",
+      "message": "Este proceso de tres pasos te guiará a través de la configuración de tus credenciales. Una vez completado, habrás configurado y activado correctamente una credencial, permitiendo el acceso y la comunicación dentro del espacio de datos.",
+      "keypairMessage": "En este paso, se crea un nuevo par de claves en el agente. Puedes generar uno nuevo o importar un par de claves existente.",
+      "csrMessage": "Se generará una Solicitud de Firma de Certificado (CSR) y se asociará con el par de claves seleccionado. Una vez creado, puedes descargarlo y enviarlo a la Autoridad de Gobernanza para completar el proceso de incorporación.",
+      "credentialsMessage": "Después de obtener la credencial de la Autoridad de Gobernanza, puedes importarla aquí para finalizar la configuración del agente.",
+      "CSR": "CSR",
+      "credentials": "Credenciales",
+      "uploadFile": "Cargar archivo"
+    },
+    "importCredentials": "Importar credenciales",
+    "active": "Activo",
+    "name": "Nombre",
+    "creationTimestamp": "Fecha de creación",
+    "actions": "Acciones",
+    "csr": "Generar nuevo CSR",
+    "generateKeyPairDescription": "Generar un par de claves públicas internamente. Este procedimiento creará el par y lo almacenará automáticamente dentro del agente.",
+    "generateKeyPairButton": "Generar Par de Claves Pública/Privada",
+    "keypairGeneration": {
+      "title": "Generar par de claves",
+      "description": "Se generará un nuevo par de claves pública/privada y se almacenará en el agente.",
+      "name": "Nombre del par de claves",
+      "message-1": "Ten en cuenta que generar un par de claves invalidará todas las credenciales previamente cargadas.",
+      "message-2": "¿Deseas continuar?",
+      "cancel": "Cancelar",
+      "confirm": "Generar par de claves",
+      "loading": "Por favor espera mientras el sistema genera el par de claves",
+      "success": "Par de claves generado correctamente y almacenado en la configuración del agente.",
+      "error": "La generación del par de claves falló. Por favor inténtalo de nuevo más tarde.",
+      "privateKey": "Clave privada",
+      "publicKey": "Clave pública",
+      "ok": "OK"
+    },
+    "importKeypair": {
+      "success": "Importación de par de claves completada correctamente",
+      "error": "La importación del par de claves falló. Por favor inténtalo de nuevo más tarde.",
+      "importKeyPairDescription": "Pega la clave privada y pública en las áreas de texto o carga los archivos",
+      "pastePrivateKeyPlaceholder": "Pega la clave privada aquí",
+      "uploadPrivateKey": "Cargar clave privada",
+      "delete": "Eliminar",
+      "pastePublicKeyPlaceholder": "Pega la clave pública aquí",
+      "requiredField": "Este campo es obligatorio",
+      "uploadPublicKey": "Cargar clave pública",
+      "algoInfo": "Si tu agente está configurado con claves ECDSA de 256 bits, debes generar el par de claves pública/privada siguiendo estos comandos de openSSL:",
+      "otherCases": "En todos los demás casos de configuración, por favor consulta la documentación de openSSL para crear un par de claves adecuado",
+      "importKeyPair": "Importar par de claves",
+      "privateKeyPlaceholder": "Pega la clave privada aquí",
+      "moreDetails": "Más detalles",
+      "lessDetails": "Menos detalles",
+      "clipboard": "Copiar al portapapeles",
+      "copied": "¡Copiado!",
+      "publicKeyPlaceholder": "Pega la clave pública aquí"
+    },
+    "csrGeneration": {
+      "certificateSigningRequestDescription": "Activar una solicitud de firma de certificado",
+      "launchCertificateSigningRequest": "Lanzar Solicitud de Firma de Certificado",
+      "titleCredential": "Solicitar nueva credencial",
+      "title": "Detalles del CSR",
+      "message": "Por favor completa los parámetros necesarios del Nombre Distinguido para proceder con el CSR.",
+      "messageCredential": "Por favor completa los parámetros necesarios del Nombre Distinguido para proceder con la solicitud de nueva credencial.",
+      "cancel": "Cancelar",
+      "confirm": "Enviar",
+      "loading": "Por favor espera mientras el sistema genera el CSR",
+      "submit": "Enviar",
+      "download": "Descargar ahora",
+      "success": "CSR generado y descargado correctamente.",
+      "error": "Hubo un error al activar tu CSR. Por favor inténtalo de nuevo más tarde.",
+      "ok": "OK"
+    },
+    "csrDetails": {
+      "commonName": "Nombre común (CN)",
+      "commonNamePlaceholder": "Nombre común",
+      "organisation": "Organización (O)",
+      "organisationPlaceholder": "Organización",
+      "organisationUnit": "Unidad de Organización (OU)",
+      "organisationUnitPlaceholder": "Unidad de Organización",
+      "country": "País (C)",
+      "countryPlaceholder": "País"
+    },
+    "credentialsImport": {
+      "credentialsImportDescription": "Importar credenciales al agente",
+      "launchCredentialsUpload": "Carga tus credenciales",
+      "title": "Cargar credenciales",
+      "message": "Ten en cuenta que cargar un conjunto de credenciales invalidará todas las previamente cargadas.",
+      "message2": "¿Deseas continuar?",
+      "cancel": "Cancelar",
+      "confirm": "Cargar credenciales",
+      "success": "Credenciales cargadas correctamente y almacenadas en el agente.",
+      "error": "La carga de credenciales falló. Por favor inténtalo de nuevo más tarde.",
+      "ok": "OK",
+      "loading": "Por favor espera mientras se cargan las credenciales"
+    },
+    "csrFilters": {
+      "name": "Nombre",
+      "active": "Activo",
+      "yes": "sí",
+      "no": "no",
+      "dateRange": "Fecha de creación",
+      "reset": "Restablecer",
+      "apply": "Aplicar",
+      "placeholder": {
+        "name": "Introducir nombre",
+        "active": "Seleccionar activo",
+        "dateRange": "Seleccionar rango de fechas de creación"
+      }
+    },
+    "updateAndInstall": "Instalar credencial",
+    "newKeypair": "Nuevo par de claves",
+    "generateNew": "Generar nuevo",
+    "import": "Importar nuevo",
+    "automaticRenewalConfiguration": {
+      "title": "Habilitar renovación automática de credenciales",
+      "errorMessage": "Algo salió mal. Por favor inténtalo de nuevo."
+    },
+    "reasonLabel": "Motivo de las nuevas credenciales"
+  },
+  "agentConfigurationFilters": {
+    "filters": {
+      "name": "Nombre",
+      "active": "Activo",
+      "updateTimestampFrom": "Fecha de creación desde",
+      "updateTimestampTo": "Fecha de creación hasta"
+    }
+  },
+  "dateRange": {
+    "start": "Inicio",
+    "end": "Fin"
+  },
+  "languageSelector": {
+    "headings":{
+      "euOfficial": "Idiomas oficiales de la UE",
+      "nonEuOfficial": "Idiomas no oficiales en la UE"
+    },
+    "languageLabels": {
+      "en": "Inglés",
+      "es": "Español",
+      "ca": "Catalán",
+      "va": "Valenciano",
+      "gl": "Gallego",
+      "eu": "Euskera"
+    }
+  },
+  "privateArea": "Área Privada",
+  "eui.euitable.ITEMS-PER-PAGE": "Mostrar",
+  "eui.euitable.SHOWING-RANGE": "{{range}}",
+  "eui.euitable.RANGE-LABEL": "de",
+  "eui.languageSelector.modalTitle": "Seleccionar lengua"
+}

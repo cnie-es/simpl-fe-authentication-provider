@@ -1,0 +1,58 @@
+@let hasActiveKeypair = (agentsConfigurationService.getActiveKeypair() | async);
+
+<eui-page>
+  <eui-page-header [isHeaderMultilines]="true" [label]="'agentConfiguration.title' | translate" [subLabel]="!hasActiveKeypair ? ('agentConfiguration.wizard.message' | translate) : null" >
+    <eui-page-header-action-items>
+      @if (hasActiveKeypair) {
+        <app-keypair-dropdown-button (generateNew)="generateNewKeypair()" (importNew)="importKeypair()" />
+        <button data-testid="agentconfiguration_header_button_updateandinstallcredential" euiButton euiPrimary (click)="updateAndInstallCredential()">
+          <span euiLabel>{{ 'agentConfiguration.updateAndInstall' | translate }}</span>
+        </button>
+        <div [formGroup]="automaticRenewalForm" class="eui-u-flex">
+          <div class="eui-u-text-small eui-u-mr-s">{{ 'agentConfiguration.automaticRenewalConfiguration.title' | translate }}</div>
+          <eui-slide-toggle data-testid="automatic_renewal_configuration_toggle_set" formControlName="set" (slideToggleChange)="toggleAutomaticRenewal($event)"></eui-slide-toggle>
+        </div>
+      }
+    </eui-page-header-action-items>
+  </eui-page-header>
+  <eui-page-content>
+    <eui-page-columns>
+      @if (hasActiveKeypair !== null) {
+        @if (hasActiveKeypair) {
+          <eui-page-column euiSizeVariant="3xl" [isCollapsed]="true" [isCollapsible]="true" [label]="'agentConfiguration.filters' | translate" class="ednel-filters">
+            <eui-page-column-body>
+              <app-filters></app-filters>
+            </eui-page-column-body>
+          </eui-page-column>
+        }
+        <eui-page-column>
+          <eui-page-column-body>
+            @if (hasActiveKeypair) {
+              <app-credentials-table (keypairDetail)="onNavigateKeypairDetail($event)" [defaultSorting]="agentsConfigurationService.defaultTableSorting" (exportCsr)="keypairId.set($event)" [csrData]="(agentsConfigurationService.getKeyPairs() | async)!" />
+            } @else {
+              <app-wizard />
+            }
+          </eui-page-column-body>
+        </eui-page-column>
+      }
+    </eui-page-columns>
+  </eui-page-content>
+</eui-page>
+
+@if (isDialogUploadOpen()) {
+  <app-upload-credentials (dialogClose)="onDialogClose($event)"></app-upload-credentials>
+}
+
+@if (isDialogGenerateOpen()) {
+  <app-generate-keypair (dialogClose)="onDialogKeypairClose($event)"></app-generate-keypair>
+}
+
+@if (isDialogImportOpen()) {
+  @if (getAlgorithm() | async) {
+    <app-import-keypair [keyPairAlgorithm]="(getAlgorithm() | async)!" (dialogClose)="onDialogKeypairClose($event)"></app-import-keypair>
+  }
+}
+
+@if (isCsrDialogOpen()) {
+  <app-csr-export (dialogClose)="onCsrDialogClose()" [keypairId]="keypairId()!"></app-csr-export>
+}

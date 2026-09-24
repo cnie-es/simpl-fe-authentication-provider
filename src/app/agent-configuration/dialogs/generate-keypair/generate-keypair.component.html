@@ -1,0 +1,27 @@
+<eui-dialog #dialog
+              [title]="'agentConfiguration.keypairGeneration.title' | translate"
+              [dismissLabel]="'agentConfiguration.keypairGeneration.cancel' | translate"
+              [acceptLabel]="'agentConfiguration.keypairGeneration.confirm' | translate"
+              [isHandleCloseOnAccept]="true"
+              (accept)="onAccept()">
+    <div class="row">
+      @if (!loading()) {
+        <div class="col-12">
+          <p> {{ 'agentConfiguration.keypairGeneration.description' | translate}}</p>
+        </div>
+        <div class="col-12">
+          <ng-container [formGroup]="form">
+            <div euiInputGroup>
+              <label euiLabel [euiRequired]="true" for="name">{{'agentConfiguration.keypairGeneration.name' | translate}}</label>
+              <input data-testid="agentconfiguration_dialog_input_name" [isShowMaxlength]="false" [euiMaxlength]="255" euiInputText id="name" formControlName="name" />
+            </div>
+          </ng-container>
+        </div>
+      } @else {
+        <div class="col-12">
+          <eui-progress-bar isIndeterminate [label]="'agentConfiguration.keypairGeneration.loading' | translate" euiSizeM></eui-progress-bar>
+        </div>
+    }
+    </div>
+</eui-dialog>
+

@@ -1,0 +1,48 @@
+<eui-dialog #dialog
+            [title]="shouldSendCsrToAuthority() ? 'agentConfiguration.csrGeneration.titleCredential' :  'agentConfiguration.csrGeneration.title' | translate"
+            [dismissLabel]="'agentConfiguration.csrGeneration.cancel' | translate"
+            [acceptLabel]="shouldSendCsrToAuthority() ? ('agentConfiguration.csrGeneration.submit' | translate) : ('agentConfiguration.csrGeneration.download' | translate)"
+            [isHandleCloseOnAccept]="true"
+            (accept)="onAccept()">
+  <ng-container>
+    @if (!loading()) {
+      <form [formGroup]="csrDetailsForm">
+        <div class="row">
+          @if (shouldSendCsrToAuthority()) {
+            <p>{{ 'agentConfiguration.csrGeneration.messageCredential' | translate }}</p>
+          } @else {
+            <p>{{ 'agentConfiguration.csrGeneration.message' | translate }}</p>
+          }
+
+        </div>
+        <div euiInputGroup>
+          <label euiLabel [euiRequired]="true" for="common_name">{{ 'agentConfiguration.csrDetails.commonName' | translate }}</label>
+          <input data-testid="agentconfiguration_form_input_commonname" [isShowMaxlength]="false" [euiMaxlength]="255" euiInputText id="common_name" formControlName="commonName"
+                 placeholder="{{'agentConfiguration.csrDetails.commonNamePlaceholder' | translate}}" />
+        </div>
+
+        <div euiInputGroup>
+          <label euiLabel [euiRequired]="true" for="organisation">{{ 'agentConfiguration.csrDetails.organisation' | translate }}</label>
+          <input data-testid="agentconfiguration_form_input_organisation" [isShowMaxlength]="false" [euiMaxlength]="255" euiInputText id="organisation" formControlName="organization"
+                 placeholder="{{'agentConfiguration.csrDetails.organisationPlaceholder' | translate }}" />
+        </div>
+
+        <div euiInputGroup>
+          <label euiLabel [euiRequired]="true" for="organisation_unit">{{ 'agentConfiguration.csrDetails.organisationUnit' | translate }}</label>
+          <input data-testid="agentconfiguration_form_input_organisationunit" [isShowMaxlength]="false" [euiMaxlength]="255" euiInputText id="organisation_unit" formControlName="organizationalUnit"
+                 placeholder="{{'agentConfiguration.csrDetails.organisationUnitPlaceholder' | translate }}" />
+        </div>
+
+        <div euiInputGroup>
+          <label euiLabel [euiRequired]="true" for="country">{{ 'agentConfiguration.csrDetails.country' | translate }}</label>
+          <input data-testid="agentconfiguration_form_input_country" [isShowMaxlength]="false" [euiMaxlength]="255" euiInputText id="country" formControlName="country"
+                 placeholder="{{'agentConfiguration.csrDetails.countryPlaceholder' | translate }}" />
+        </div>
+      </form>
+    } @else {
+      <div class="col-12">
+        <eui-progress-bar isIndeterminate [label]="'agentConfiguration.csrGeneration.loading' | translate" euiSizeM></eui-progress-bar>
+      </div>
+    }
+  </ng-container>
+</eui-dialog>

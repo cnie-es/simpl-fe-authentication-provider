@@ -1,0 +1,22 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="eui-dropdown-button">
+        <eui-dropdown>
+          <button data-testid="agentconfiguration_keypairdropdown_button_newkeypair" euiButton euiPrimary>
+            <div euiLabel>{{'agentConfiguration.newKeypair' | translate}}</div>
+            <eui-icon-svg icon="eui-ecl-plus:eui" size="xs" />
+          </button>
+          <eui-dropdown-content>
+            <button data-testid="agentconfiguration_keypairdropdown_button_generatenewkeypair" euiDropdownItem (click)="generateNew.emit()">
+              <span euiLabel>{{'agentConfiguration.generateNew' | translate}}</span>
+            </button>
+            <button data-testid="agentconfiguration_keypairdropdown_button_importkeypair" euiDropdownItem (click)="importNew.emit()">
+              <span euiLabel>{{'agentConfiguration.import' | translate}}</span>
+            </button>
+          </eui-dropdown-content>
+        </eui-dropdown>
+      </div>
+    </div>
+  </div>
+</div>

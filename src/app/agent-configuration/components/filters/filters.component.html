@@ -1,0 +1,31 @@
+<form [formGroup]="filtersForm" class="eui-u-flex eui-u-flex-column eui-u-flex-gap-s" id="filtersForm"
+      (ngSubmit)="addFilter()">
+  <div euiInputGroup>
+    <label euiLabel for="name">{{ 'agentConfiguration.csrFilters.name' | translate }}</label>
+    <input data-testid="agentconfiguration_filter_input_name" [isShowMaxlength]="false" [euiMaxlength]="255" euiInputText id="name" formControlName="name"
+           placeholder="{{ 'agentConfiguration.csrFilters.placeholder.name' | translate}}" />
+  </div>
+  <div euiInputGroup>
+    <label euiLabel for="active">{{ 'agentConfiguration.csrFilters.active' | translate }}</label>
+    <select data-testid="agentconfiguration_filter_input_active" [placeholder]="'agentConfiguration.csrFilters.placeholder.active' | translate" euiSelect name="active" id="active" formControlName="active">
+      <option value="true">{{ 'agentConfiguration.csrFilters.yes' | translate }}</option>
+      <option value="false">{{ 'agentConfiguration.csrFilters.no' | translate}}</option>
+    </select>
+  </div>
+  <div euiInputGroup>
+    <label euiLabel for="dateRange">{{ 'agentConfiguration.csrFilters.dateRange' | translate }}</label>
+    <eui-date-range-selector data-testid="agentconfiguration_filter_input_daterange" id="dateRange" formControlName="dateRange" [isResponsive]="true" [isClearable]="true"
+          [firstInputPlaceholder]="'dateRange.start' | translate"
+          [secondInputPlaceholder]="'dateRange.end' | translate"></eui-date-range-selector>
+  </div>
+  <div class="ednel-button-group">
+    <button data-testid="agentconfiguration_filter_button_reset" euiButton id="csr-filters-reset-button" type="button" class="eui-u-width-50"
+            euiSecondary (click)="resetParticipantFilters()">
+      {{ 'agentConfiguration.csrFilters.reset' | translate }}
+    </button>
+    <button [euiDisabled]="filtersForm.invalid" data-testid="agentconfiguration_filter_button_submit" euiButton id="csr-filters-submit-button" type="submit" class="eui-u-width-50"
+            euiPrimary>
+      {{ 'agentConfiguration.csrFilters.apply' | translate }}
+    </button>
+  </div>
+</form>

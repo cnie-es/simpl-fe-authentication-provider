@@ -1,0 +1,101 @@
+<eui-dialog #dialog
+            [title]="'agentConfiguration.importKeypair.importKeyPair' | translate"
+            [dismissLabel]="'agentConfiguration.keypairGeneration.cancel' | translate"
+            [acceptLabel]="'agentConfiguration.importKeypair.importKeyPair' | translate"
+            [isHandleCloseOnAccept]="true"
+            (accept)="onAccept()">
+  <div class="row">
+    @if (!loading()) {
+      <div class="col-12">
+        <div class="eui-u-flex eui-u-flex-justify-content-between">
+          <div>
+            <eui-chip euiSecondary [euiOutline]="true" class="eui-u-mr-2xs eui-u-mb-s">
+              <eui-icon-svg icon="lock-closed:outline" /> {{ keyPairAlgorithm().algorithm }}
+            </eui-chip>
+            <eui-chip euiSecondary [euiOutline]="true" class="eui-u-mr-2xs eui-u-mb-s">
+              <eui-icon-svg icon="cog:outline" /> {{ keyPairAlgorithm().keyLength }} Bit
+            </eui-chip>
+          </div>
+          <div class="eui-u-display-flex eui-u-flex-align-items-center">
+            <span class="eui-u-mr-xs">{{  'agentConfiguration.importKeypair.moreDetails' | translate }}</span>
+            <eui-icon-button-expander #expanderButton [isExpanded]="true" fillColor="neutral" (buttonClick)="expanderButton.isExpanded = !expanderButton.isExpanded"/>
+          </div>
+        </div>
+        @if (expanderButton.isExpanded) {
+          <div>
+            <p>{{ 'agentConfiguration.importKeypair.algoInfo' | translate }}</p>
+            <div class="eui-u-c-bg-neutral-bg eui-u-pl-s eui-u-pt-s eui-u-pr-m eui-u-p-relative">
+              @if (!showSuccesfulCopy()){
+                <eui-icon-button (buttonClick)="copyToClipboard()" euiTooltip="{{ 'agentConfiguration.importKeypair.clipboard' | translate }}" style="right:0; top:0" class="eui-u-p-absolute" icon="copy:outline" ariaLabel="information" euiSecondary/>
+              } @else {
+                <eui-feedback-message [isMuted]="true" euiSecondary style="right:10px; top:0" class="eui-u-p-absolute">{{ 'agentConfiguration.importKeypair.copied'| translate}}</eui-feedback-message>
+              }
+              <code style="white-space: pre-wrap">{{codeInstructions}}</code>
+            </div>
+            <p>{{ 'agentConfiguration.importKeypair.otherCases' | translate }}</p>
+          </div>
+        }
+        <div>
+        </div>
+      </div>
+      <div class="col-12">
+        <ng-container [formGroup]="importForm">
+          <div euiInputGroup>
+            <label [euiRequired]="true" euiLabel for="name">{{'agentConfiguration.keypairGeneration.name' | translate}}</label>
+            <input data-testid="agentconfiguration_form_input_name" [isShowMaxlength]="false" [euiMaxlength]="255" euiInputText id="name" formControlName="name" />
+            @if (nameError) {
+              <eui-feedback-message [isMuted]="true" euiDanger>{{'agentConfiguration.importKeypair.requiredField' | translate}}</eui-feedback-message>
+            }
+          </div>
+          <div euiInputGroup>
+            <label [euiRequired]="true" euiLabel for="private-key">{{ 'agentConfiguration.keypairGeneration.privateKey' | translate }}</label>
+            <textarea data-testid="agentconfiguration_form_input_privatekeypair" [euiMaxlength]="4000" formControlName="privateKey" euiTextArea id="private-key" name="private-key" rows="5" placeholder="{{'agentConfiguration.importKeypair.privateKeyPlaceholder' | translate}}"></textarea>
+            @if (privateKeyError) {
+              <eui-feedback-message [isMuted]="true" euiDanger>{{'agentConfiguration.importKeypair.requiredField' | translate}}</eui-feedback-message>
+            }
+          </div>
+          @if (!privateKeyUploaded()) {
+            <button data-testid="agentconfiguration_form_button_uploadprivatekeypair" euiButton class="eui-u-mr-s eui-u-mb-s" euiPrimary [euiOutline]="true" (click)="fileInputPrivate.click()">{{'agentConfiguration.importKeypair.uploadPrivateKey' | translate}} <eui-icon-svg icon="eui-file-upload"></eui-icon-svg></button>
+          }
+          @if (privateKeyUploaded()) {
+            <button data-testid="agentconfiguration_form_button_deleteprivatekeypair" class="eui-u-mr-s eui-u-mb-s" euiButton type="button" euiPrimary (click)="onFileDeleted('private')">
+              <eui-icon-svg icon="eui-delete-forever"></eui-icon-svg>
+              <span euiLabel>{{ 'agentConfiguration.importKeypair.delete' | translate }}</span>
+            </button>
+            @if (privateFileInfo().name) {
+              <span class="ms-3">{{ privateFileInfo().name }}</span>
+            }
+          }
+          <input data-testid="agentconfiguration_form_input_" hidden (change)="onFileUploaded($event, 'private')" #fileInputPrivate accept=".pem" type="file"
+                 id="fileInputPrivate">
+          <div euiInputGroup>
+            <label [euiRequired]="true" euiLabel for="public-key">{{ 'agentConfiguration.keypairGeneration.publicKey' | translate }}</label>
+            <textarea [euiMaxlength]="4000" formControlName="publicKey" euiTextArea id="public-key" name="public-key" rows="5" placeholder="{{'agentConfiguration.importKeypair.publicKeyPlaceholder' | translate}}"></textarea>
+            @if (publicKeyError) {
+              <eui-feedback-message [isMuted]="true" euiDanger>{{'agentConfiguration.importKeypair.requiredField' | translate}}</eui-feedback-message>
+            }
+          </div>
+          @if (!publicKeyUploaded()) {
+            <button euiButton class="eui-u-mr-s eui-u-mb-s" euiPrimary [euiOutline]="true" (click)="fileInputPublic.click()">{{'agentConfiguration.importKeypair.uploadPublicKey' | translate}} <eui-icon-svg icon="eui-file-upload"></eui-icon-svg></button>
+          }
+          @if (publicKeyUploaded()) {
+            <button class="eui-u-mr-s eui-u-mb-s" euiButton type="button" euiPrimary (click)="onFileDeleted('public')">
+              <eui-icon-svg icon="eui-delete-forever"></eui-icon-svg>
+              <span euiLabel>{{ 'agentConfiguration.importKeypair.delete' | translate }}</span>
+            </button>
+            @if (publicFileInfo().name) {
+              <span class="ms-3">{{ publicFileInfo().name }}</span>
+            }
+          }
+          <input hidden (change)="onFileUploaded($event, 'public')" #fileInputPublic accept=".pem" type="file"
+                 id="fileInputPublic">
+        </ng-container>
+      </div>
+    } @else {
+      <div class="col-12">
+        <eui-progress-bar isIndeterminate [label]="'agentConfiguration.keypairGeneration.loading' | translate" euiSizeM></eui-progress-bar>
+      </div>
+    }
+  </div>
+</eui-dialog>
+

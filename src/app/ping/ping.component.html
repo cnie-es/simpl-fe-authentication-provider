@@ -1,0 +1,23 @@
+
+  <div class="row eui-u-px-s eui-u-pt-4xl eui-u-flex eui-u-flex-justify-content-center">
+    <div class="col-12 col-lg-4">
+        <ng-container *transloco="let t; prefix: 'ping'">
+          <h1 class="eui-u-c-primary">{{ t('title') }}</h1>
+
+          <h5>{{ t('subTitle') }}</h5>
+
+          <div euiInputGroup>
+            <label [euiRequired]="true" euiLabel for="with_label_default">{{ t('FQDNLabel') }}</label>
+            <input data-testid="ping_page_input" euiInputText id="with_label_default" [placeholder]="t('FQDNPlaceholder')" [formControl]="fqdnControl" />
+          </div>
+
+          <button class="eui-u-width-100" euiButton euiPrimary data-testid="ping_page_button"
+                  [disabled]="loading || fqdnControl.invalid" (click)="onPing()">
+            <eui-icon-svg class="eui-u-mr-s" isLoading="" *ngIf="loading"></eui-icon-svg>
+            <span euiLabel >{{ t('echoButton') }}</span>
+          </button>
+
+        </ng-container>
+    </div>
+  </div>
+

@@ -1,0 +1,26 @@
+@if (wizardService.activeStepIndex() !== 0) {
+  <eui-wizard [activeStepIndex]="wizardService.activeStepIndex()" #wizard (selectStep)="onSelectStep($event)" [isNavigationAllowed]="true">
+    <eui-wizard-step [label]="'agentConfiguration.wizard.keypair' | translate">
+      @if (wizard.activeStepIndex === wizardService.wizardSteps.KEYPAIR) {
+        <div class="eui-u-pv-m">
+          <app-keypair (keyPairGenerated)="onKeyPairGenerated()"></app-keypair>
+        </div>
+      }
+    </eui-wizard-step>
+    <eui-wizard-step [label]="'agentConfiguration.wizard.CSR' | translate">
+      @if (wizard.activeStepIndex === wizardService.wizardSteps.CSR) {
+        <div class="eui-u-pv-m">
+          <app-csr (csrGenerated)="onCsrGenerated()"></app-csr>
+        </div>
+      }
+    </eui-wizard-step>
+    <eui-wizard-step [label]="'agentConfiguration.wizard.credentials' | translate">
+      @if (wizard.activeStepIndex === wizardService.wizardSteps.CREDENTIALS) {
+        <div class="eui-u-pv-m">
+          <app-credentials (credentialsUploaded)="onCredentialsUploaded()"></app-credentials>
+        </div>
+      }
+    </eui-wizard-step>
+  </eui-wizard>
+}
+

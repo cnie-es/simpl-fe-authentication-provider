@@ -1,0 +1,14 @@
+<eui-page-header [isHeaderMultilines]="true" [label]="'agentConfiguration.wizard.keypair' | translate" [subLabel]="'agentConfiguration.wizard.keypairMessage' | translate"></eui-page-header>
+<eui-page-content>
+  <app-keypair-dropdown-button (generateNew)="generateNewKeypair()" (importNew)="importKeypair()" />
+</eui-page-content>
+
+@if (isDialogGenerateOpen()) {
+  <app-generate-keypair (dialogClose)="onDialogClose($event)"></app-generate-keypair>
+}
+
+@if (isDialogImportOpen()) {
+  @if (getAlgorithmDetails() | async) {
+    <app-import-keypair [keyPairAlgorithm]="(getAlgorithmDetails() | async)!" (dialogClose)="onDialogClose($event)"></app-import-keypair>
+  }
+}

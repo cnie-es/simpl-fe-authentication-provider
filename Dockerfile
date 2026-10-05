@@ -5,7 +5,7 @@ FROM nginxinc/nginx-unprivileged:alpine3.22-perl@sha256:f1444b4f78f91b0c42dedc01
 # repository where the complete corresponding source code is available.
 LABEL org.opencontainers.image.title="fe-authentication-provider (CNIE-ES fork)" \
       org.opencontainers.image.description="Modified version of SIMPL fe-authentication-provider (upstream commit 82740ef), modified by the EDNEL-RIOJA project team for CNIE-ES between 2026-03-03 and 2026-09-11. See /licenses/NOTICE.EDNEL.md." \
-      org.opencontainers.image.version="ednel-v1.0.2" \
+      org.opencontainers.image.version="ednel-v1.0.6" \
       org.opencontainers.image.vendor="CNIE-ES" \
       org.opencontainers.image.licenses="EUPL-1.2" \
       org.opencontainers.image.source="https://github.com/cnie-es/simpl-fe-authentication-provider"
